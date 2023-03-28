@@ -1,0 +1,11 @@
+/* CSS Document */
+
+@import url(http://fonts.googleapis.com/css?family=Roboto);
+
+body {margin:0;font-family:'Lato',sans-serif;color:#333;}
+a, a:visited {text-decoration:none;color:#000;}
+a.owner {color:#03C;}
+h1 {font-size: 32px;margin: 16px 0 0 0;}
+.page_width {max-width:1400px; width:96%;}
+.center {margin-left:auto; margin-right:auto;}
+ul {padding:0;margin:0;list-style:none;}

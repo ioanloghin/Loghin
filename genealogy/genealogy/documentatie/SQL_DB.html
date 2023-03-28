@@ -1,0 +1,76 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>clasa SQL_DB</title>
+<link rel="stylesheet" type="text/css" href="images/style.css" />
+</head>
+
+<body>
+<ul class="menu">
+	<li>&rsaquo; <a href="AG_Operation.html">Clasa AG_Operation</a></li>
+    <li>&rsaquo; <a href="AG_UserBox.html">Clasa AG_UserBox</a></li>
+    <li>&rsaquo; <a href="AG_FamilyBox.html">Clasa AG_FamilyBox</a></li>
+    <li>&rsaquo; <span>Clasa SQL_DB</span></li>
+</ul>
+<br /><br /><br />
+<h1>Clasa SQL_DB</h1>
+<blockquote>
+	<p>Clasa de lucru cu baza de date.</p>
+    <p class="important">Subclasa: AG_Operation<br /><strong>Recomand</strong> folosirea functiilor clasei in locul simplelor functie de gestionare a bazei de date. Acest lucru face mult mai usoara schimbarea tipului bazei de date sau a unor functii care s-au depreciat intre timp.</strong></p>
+</blockquote>
+<br /><br />
+<h2>Functia <strong>sql_connect</strong>()</h2> 
+<blockquote>
+	<p>....</p>
+	<pre>// stabilim conexiunea la baza de date
+SQL_DB::sql_connect();</pre>
+</blockquote>
+
+<h2>Functia <strong>sql_querry</strong>($query)</h2> 
+<blockquote>
+	<span class="return">Return <em>boolean</em></span>
+	<p>Realizeaza o cerere catre baza de date. Alternativa pentru mysql_query().<br />Returneaza TRUE daca s-a realizat cererea iar FALSE in caz contrar.</p>
+	<pre>SQL_DB::sql_querry("UPDATE `table` SET `nume` = 'Adrian' WHERE `id` = '1' LIMIT 1");</pre>
+</blockquote>
+
+<h2>Functia <strong>sql_close</strong>()</h2> 
+<blockquote>
+	<span class="return">Return <em>boolean</em></span>
+	<p>Inchide conexiunea la baza de date. Alternativa pentru mysql_close().<br />Returneaza TRUE daca s-a realizat cu succes iar FALSE in caz contrar.</p>
+	<pre>// inchidem conexiunea la baza de date
+SQL_DB::sql_close();</pre>
+</blockquote>
+
+<h2>Functia <strong>sql_delete</strong>($table, $where = NULL)</h2> 
+<blockquote>
+	<p>...</p>
+    <pre>...</pre>
+</blockquote>
+
+<h2>Functia <strong>sql_select</strong>($table, $where = NULL, $order = NULL, $start = 0, $limit = 0, $keys = array(), $distinct = NULL)</h2> 
+<blockquote>
+	<span class="return">Return <em>array</em></span>
+	<p>...</p>
+	<pre>...</pre>
+</blockquote>
+
+<h2>Functia <strong>sql_export</strong>($filename)</h2> 
+<blockquote>
+	<p>...</p>
+    <pre>...</pre>
+</blockquote>
+
+<h2>Functia <strong>sql_count</strong>($table, $where = NULL, $limit = 0)</h2> 
+<blockquote>
+	<p>...</p>
+    <pre>...</pre>
+</blockquote>
+
+<h2>Functia <strong>sql_insert</strong>($table, $keys = array(), $values = array())</h2> 
+<blockquote>
+	<p>...</p>
+    <pre>...</pre>
+</blockquote>
+
+</body>
+</html>

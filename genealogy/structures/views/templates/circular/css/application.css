@@ -1,0 +1,4 @@
+body {background:none;overflow-x:hidden;overflow-y:scroll}
+
+#Header { height:632px; background:url(../images/application/header-bg.png) center top; }
+#Logo { width:589px; height:535px; padding-top:110px; background:url(../images/application/logo.png) no-repeat; margin:0 auto; }

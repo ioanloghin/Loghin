@@ -1,0 +1,249 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>clasa AG_Operation</title>
+<link rel="stylesheet" type="text/css" href="images/style.css" />
+</head>
+
+<body>
+<ul class="menu">
+	<li>&rsaquo; <span>Clasa AG_Operation</span></li>
+    <li>&rsaquo; <a href="AG_UserBox.html">Clasa AG_UserBox</a></li>
+    <li>&rsaquo; <a href="AG_FamilyBox.html">Clasa AG_FamilyBox</a></li>
+    <li>&rsaquo; <a href="SQL_DB.html">Clasa SQL_DB</a></li>
+</ul>
+<br /><br /><br />
+<h1>Clasa AG_Operation</h1>
+<blockquote>
+	<p>Clasa principal&#259; de opera&#355;iuni a scriptului Arbore Genealogic.<br />Nu ofera suport pentru crearea de obiecte.</p>
+    <p class="important">Clasa AG_Operation extinde clasa SQL_DB situata in acelasi director (codes/clase/).<br />Functiile vor fi folosite in mod independent sub forma <strong>AG_Operation::functie()</p>
+</blockquote>
+<br /><br />
+<h2>Functia <strong>family_create</strong>($id_arbore, $type = 'current')</h2> 
+<blockquote>
+	<span class="return">Return <strong>$id_family</strong></span>
+	<p>Creaza o familie goala (fara membri) in arborele specificat. Atributul $type este optional, el desemnand tipul familiei: familie curenta (default) sau ex relatie</p>
+	<pre>$id_family = AG_Operation::family_create(1);
+
+echo $id_family;</pre>
+</blockquote>
+
+<h2>Functia <strong>family_update</strong>($id_family, $sets)</h2> 
+<blockquote>
+	<span class="return">Return <em>TRUE</em> daca s-a realizat modificarea, <em>FALSE</em> in caz contrar.</span>
+	<p>Modifica unul sau mai multe campuri din familia specificata.</p>
+	<pre>$sets = array();
+$sets['camp1'] = $valoare1;
+$sets['camp2'] = $valoare2;
+
+$bool = AG_Operation::family_update(13, $sets);
+if($bool)
+    echo 'S-a executat cu succes!';
+else
+    echo 'Eroare';</pre>
+</blockquote>
+
+<h2>Functia <strong>family_delete</strong>($id_family)</h2> 
+<blockquote>
+	<span class="return">Return <em>TRUE</em> daca familia a fost stearsa, <em>FALSE</em> in caz contrar.</span>
+	<p>Sterge familia specificata</p>
+	<pre>$bool = AG_Operation::family_delete(13);
+if($bool)
+    echo 'Familia cu id = 13 a fost stearsa.';
+else
+    echo 'Eroare';</pre>
+</blockquote>
+
+<h2>Functia <strong>family_check_linked</strong>($id_this_family, $id_target_family, &amp;$family_array, &amp;$family_linked)</h2> 
+<blockquote>
+	<span class="return">Return <em>TRUE</em> daca familia are legaturi cu familia tinta ($id_target_family), <em>FALSE</em> in caz contrar.</span>
+	<p>Functie recursiva ce verifica daca o familie ($id_this_family) detine legaturi catre o familie tinta ($id_target_family) prin intermediul familiilor din $family_array</p>
+	<pre>$id_target_family = 13;
+
+$family_array = array(12, 28, 29, 33);// forma este array(id_family, id_family ...)
+
+$family_linked = array(
+    12 => 13,// forma pentru o inregistrare este id_family => id_asc_family (id-ul familiei ascendente)
+    28 => 12,
+    29 => 28,// verificarea se va face in felul urmator 29 duce catre 28, 28 catre 12 iar 12 catre 13, asadar familia 29 contine legaturi catre familia tinta $id_target_family
+    33 => 55,// dupa cum se observa, familia 33 nu are nici o legatura care sa conduca la $id_target_family care este 13, iar in cadrul functiei va fi eliminata
+);
+
+foreach($family_array as $local_id)
+{
+    if(AG_Operation::family_check_linked($local_id, $id_target_family, $family_array, $family_linked))
+        echo "Familia $local_id are legaturi cu familia tinta $id_target_family.&lt;br /&gt;";
+    else
+        echo "Familia $local_id a fost eliminata.&lt;br /&gt;";
+}
+</pre>
+</blockquote>
+
+<h2>Functia <strong>family_import_local</strong>($current_id_family, $imported_user, $internal_position, &amp;$current_family, &amp;$family_imported_user)</h2> 
+<blockquote>
+	<span class="return">Return $return_import_local</span>
+	<p>Importa membri din familia userului importat (partenerul, copii si ex relatiile).<br />$current_id_family - id-ul familiei userului importat (familia din arborele nostru)<br />$imported_user - id-ul userului importat<br />$internal_position - pozitia pe care s-a importat userul (1 - parinte1, 2 - parinte2, 3 - copil)<br />&amp;$current_family - pointer catre familia userului imporat (familia din arborele nostru)<br />&amp;$family_imported_user - pointer catre familia userului imporat (familia din arborele extern - de unde s-a imporat userul)</p>
+	<pre>$current_family = array(
+    0 => 18,// id-ul familiei
+    1 => 0,// id parinte 1
+    2 => 107,// id parinte 2
+    3 => array()// id-uri copii
+);
+
+$family_imported_user = array(
+    0 => 5,// id-ul familiei
+    1 => 74,// id parinte 1
+    2 => 107,// id parinte 2
+    3 => array(28, 31)// id-uri copii
+);
+
+$return_import_local = AG_Operation::family_import_local(13, 107, 2, $current_family, $family_imported_user);</pre>
+</blockquote>
+
+<h2>Functia <strong>family_import_expansive</strong>($current_id_tree, &amp;$families_for_import, $target_id_family, $direction, &amp;$family_linked)</h2> 
+<blockquote>
+	<span class="return">Return $return_import_local</span>
+	<p>Importa familile descendente sau ascendente ce au legatura cu userul importat.<br />$current_id_tree - id-ul arborelui destinatie (arborele unde s-a importat userul)<br />&amp;$families_for_import - pointer catre o lista cu familile ce trebuiesc imporate<br />$target_id_family - id-ul familiei userului importat din arborele expeditor (arborele de unde a fost importat userul)<br />$direction - directia de import (asc | desc)<br />&amp;$family_linked - pointer catre lista cu legaturi intre familii</p>
+	<pre>$families_for_import = array(12, 28, 29, 33);
+
+$family_linked = array(
+    12 => 13,// forma pentru o inregistrare este id_family => id_asc_family (id-ul familiei ascendente)
+    28 => 12,
+    29 => 28,// verificarea se va face in felul urmator 29 duce catre 28, 28 catre 12 iar 12 catre 13, asadar familia 29 contine legaturi catre familia tinta $id_target_family
+    33 => 55,// dupa cum se observa, familia 33 nu are nici o legatura care sa conduca la $id_target_family care este 13, iar in cadrul functiei va fi eliminata
+);
+
+$return_import_expansive = AG_Operation::family_import_expansive(1, $families_for_import, 13, 'desc', $family_linked);</pre>
+</blockquote>
+
+<h2>Functia <strong>get_members_connects</strong>($id_tree, $id_user, $to = NULL, &amp;$member_ids = array(), $return_type = 'general')</h2> 
+<blockquote>
+	<span class="return">Return $member_ids;</span>
+	<p>Este o functie recursiva ce returneaza un array cu toate familile conectate cu userul specificat.<br />
+    $id_tree = id-ul arborelui<br />
+    $id_user = id-ul userului<br />
+    $to = directia de cautare. Poate lua urmatoarele valori:<br />
+    &nbsp;&nbsp;&nbsp;asc - membri din familia userului + familile ascendente userului<br />
+    &nbsp;&nbsp;&nbsp;desc - membri din familia userului + familile descendente userului<br />
+    &nbsp;&nbsp;&nbsp;only_asc - doar familile ascendente userului<br />
+    &nbsp;&nbsp;&nbsp;only_desc - doar familile descendente userului<br />
+    $member_ids si $return_type sunt parametri optionali;</p>
+	<pre>$member_ids = AG_Operation::get_members_connects(1, 25, 'only_desc');
+var_export($member_ids);
+
+/*
+V-a afisa:
+array(
+   21 => array(
+       1 => 12,
+       2 => 15,
+       3 => array(25)
+   ),
+   19 => array(
+       1 => 31,
+       2 => 34,
+       3 => array(12, 3)
+   )
+)
+
+Explicatie:
+array(
+   id_familie => array(
+       1 => id_parinte_1, // id-ul tatalui
+       2 => id_parinte_2, // id-ul mamei
+       3 => array(id_copil, id_copil ...)
+   )
+)
+*/</pre>
+</blockquote>
+
+<h2>Functia <strong>cnt_members_connects</strong>(&amp;$member_ids)</h2> 
+<blockquote>
+	<span class="return">Return $count_member_ids;</span>
+	<p>Numara membri array-ului $member_ids generat de functia get_members_connects();</p>
+	<pre>// pentru
+$member_ids = array(
+   21 => array(
+       1 => 12,
+       2 => 15,
+       3 => array(25)
+   ),
+   19 => array(
+       1 => 31,
+       2 => 34,
+       3 => array(12, 3)
+   )
+);
+
+$count_member_ids = AG_Operation::cnt_members_connects($member_ids);
+echo $count_member_ids; // afiseaza 7</pre>
+</blockquote>
+
+<h2>Functia <strong>user_haveAsc</strong>($id_user)</h2> 
+<blockquote>
+	<span class="return">Return <em>TRUE</em> daca are ascendenti (copii), iar <em>FALSE</em> in caz contrar</span>
+	<p>Verifica daca utilizatorul are ascendenti (copii).</p>
+	<pre>$bool = AG_Operation::user_haveAsc(78);
+if($bool)
+    echo 'Userul 78 are ascendenti.';
+else
+    echo 'Nu are ascendeti';</pre>
+</blockquote>
+
+<h2>Functia <strong>user_haveDesc</strong>($id_user)</h2> 
+<blockquote>
+	<span class="return">Return <em>TRUE</em> daca are descendenti (parinti), iar <em>FALSE</em> in caz contrar</span>
+	<p>Verifica daca utilizatorul are descendenti (parinti).</p>
+	<pre>$bool = AG_Operation::user_haveDesc(132);
+if($bool)
+    echo 'Userul 132 are descendeti.';
+else
+    echo 'Nu are descendeti';</pre>
+</blockquote>
+
+<h2>Functia <strong>get_partener</strong>($id_family, $id_user)</h2> 
+<blockquote>
+	<span class="return">Return <em>$id_partener</em>;</span>
+	<p>Returneaza id-ul partenerului membrului specificat.</p>
+	<pre>...</pre>
+</blockquote>
+
+<h2>Functia <strong>checkIn_partener</strong>($id_family, $id_partener)</h2> 
+<blockquote>
+	<span class="return">Return <em>TRUE</em> daca partenerul specificat exista in acea familie, iar <em>FALSE</em> in caz contrar</span>
+	<p>Verifica daca id-ul utilizatorului ($id_partener) este parinte in familia specificata.</p>
+</blockquote>
+
+<h2>Functia <strong>myFamily</strong>($id_user, $id_arbore)</h2> 
+<blockquote>
+	<span class="return">Return $id_family;</span>
+	<p>Returneaza id-ul familiei in care utilizatorul este parinte (tata sau mama).</p>
+	<pre>$id_user = 4;
+$id_arbore = 1;
+
+$my_family = AG_Operation::myFamily($id_user, $id_arbore);</pre>
+</blockquote>
+
+<h2>Functia <strong>myTree</strong>($id_user)</h2> 
+<blockquote>
+	<span class="return">Return $id_arbore;</span>
+	<p>...</p>
+	<pre>...</pre>
+</blockquote>
+
+<h2>Functia <strong>myTreeAll</strong>($id_user)</h2> 
+<blockquote>
+	<span class="return">Return <em>array($id_arbore1, $id_arbore2, ...)</em>;</span>
+	<p>...</p>
+	<pre>...</pre>
+</blockquote>
+
+<h2>Functia <strong>userRelation</strong>($id_user, $id_target)</h2> 
+<blockquote>
+	<span class="return">Return $id_relation;</span>
+	<p>...</p>
+	<pre>...</pre>
+</blockquote>
+
+</body>
+</html>

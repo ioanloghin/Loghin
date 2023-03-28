@@ -1,0 +1,37 @@
+/* Quick Profile Block */
+.popup-fancybox .fancybox-skin {background:transparent !important;-webkit-border-radius:5px;-moz-border-radius:5px;border-radius:5px}
+#quick-block {width:400px;margin-top:6px;position:relative;box-shadow:0 0 20px rgba(0, 0, 0, 0.2);border-radius:7px; background: #e8e0d3; /* Old browsers */
+background: -moz-linear-gradient(45deg,  #e8e0d3 0%, #f7f3e9 50%, #fffaf4 98%); /* FF3.6+ */
+background: -webkit-gradient(linear, left bottom, right top, color-stop(0%,#e8e0d3), color-stop(50%,#f7f3e9), color-stop(98%,#fffaf4)); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(45deg,  #e8e0d3 0%,#f7f3e9 50%,#fffaf4 98%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(45deg,  #e8e0d3 0%,#f7f3e9 50%,#fffaf4 98%); /* Opera 11.10+ */
+background: -ms-linear-gradient(45deg,  #e8e0d3 0%,#f7f3e9 50%,#fffaf4 98%); /* IE10+ */
+background: linear-gradient(45deg,  #e8e0d3 0%,#f7f3e9 50%,#fffaf4 98%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e8e0d3', endColorstr='#fffaf4',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */}
+#quick-block > h2 {background:url('../../images/application/qiuck-block-head.png');display:block;width:160px;height:36px;margin-left:-96px;padding:0 16px;overflow:hidden;position:absolute;top:-6px;left:50%;white-space:nowrap;font:normal 18px/36px arial;text-align:center;text-shadow:0 1px 0 rgba(0, 0, 0, 0.4);text-overflow:ellipsis;color:#ffffff}
+#quick-block > .head {}
+#quick-block > .head > a {background:#fffcf7;width:60px;height:23px;padding:1px 5px 0 25px;margin:3px;position:relative;overflow:hidden;font:bold 13px/23px arial;text-overflow:ellipsis;color:#006ebe;border-radius:5px;border:1px solid #e0dfde}
+#quick-block > .head > a > span {display:block;width:16px;height:14px;position:absolute;top:5px;left:5px;float:left}
+#quick-block > .head > a.left > span {background-position:-71px -31px}
+#quick-block > .head > a.right > span {background-position:-88px -31px}
+#quick-block > .head > a:hover {background:url('../../images/application/bg.png') 0 -753px repeat-x;text-decoration:none;color:#ffffff;border-color:#423833}
+#quick-block > .head > a.left:hover > span {background-position:-105px -31px}
+#quick-block > .head > a.right:hover > span {background-position:-122px -31px}
+#quick-block > .cnt {padding:10px}
+#quick-block > .cnt > .image {}
+#quick-block > .cnt > .image > img {background:#ffffff;padding:1px;border-radius:2px;border:2px solid #ab9985}
+#quick-block > .cnt > .right {width:240px;padding-top:110px}
+#quick-block > .cnt > .right > p {font:normal 13px/16px arial}
+#quick-block > .cnt > .right > p > a {text-decoration:underline;color:#5b504a}
+#quick-block > .cnt > .right > p > a:hover {text-decoration:none}
+#quick-block > .footer {/*background-position:0 -778px;*/height:20px;padding:6px 0 4px;font:bold 15px/22px arial;text-align:center;border-radius:0 0 5px 5px; border-top:1px solid #96A860; border-bottom:1px solid #3E7308;background: #a5c166; /* Old browsers */
+background: -moz-linear-gradient(top,  #a5c166 0%, #92b84b 50%, #7eaa29 51%, #609510 100%); /* FF3.6+ */
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#a5c166), color-stop(50%,#92b84b), color-stop(51%,#7eaa29), color-stop(100%,#609510)); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(top,  #a5c166 0%,#92b84b 50%,#7eaa29 51%,#609510 100%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(top,  #a5c166 0%,#92b84b 50%,#7eaa29 51%,#609510 100%); /* Opera 11.10+ */
+background: -ms-linear-gradient(top,  #a5c166 0%,#92b84b 50%,#7eaa29 51%,#609510 100%); /* IE10+ */
+background: linear-gradient(to bottom,  #a5c166 0%,#92b84b 50%,#7eaa29 51%,#609510 100%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a5c166', endColorstr='#609510',GradientType=0 ); /* IE6-9 */}
+#quick-block > .footer > a {padding:0 25px;text-shadow:0 1px 0 rgba(255, 255, 255, 0.50);color:#3a5c02;border-right:1px solid #8fbddc}
+#quick-block > .footer > a:hover {text-shadow:0 1px 1px rgba(0, 0, 0, 0.50);text-decoration:none;color:#fffcf7}
+#quick-block > .footer > a.last {border:0}

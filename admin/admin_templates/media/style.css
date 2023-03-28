@@ -1,0 +1,208 @@
+/* common */
+body, td {margin:0;padding:0;font-size:11px;font-family:Verdana, Geneva, sans-serif;text-align:left}
+body {background-color:#ffffff}
+
+/* defaults */
+.left {float:left}
+.right {float:right}
+.hide {display:none}
+.nowrap {white-space:nowrap}
+img, a img {border:0}
+.required {color:#A81605}
+
+
+/* links */
+a {font-size:11px;text-decoration:none;color:#222222}
+	a:hover {text-decoration:underline}
+
+/* Clean fix */
+.clear:after, .clear-li li:after {content:".";display:block;font-size:1px;height:0;clear:both;visibility:hidden}
+	.clear, .clear-li li {display:inline-block}
+	.clear, .clear-li li {display:block}
+
+
+/* header table */
+.headerMenuTable {}
+	.headerMenuRow1 {}
+		.headerMenuRow1 h1 {padding:0 20px}
+			.headerMenuRow1 a {font-size:22px}
+	.headerMenuRow2 {padding:4px 8px 4px 8px;font-size:11px;text-align:right;color:#444444}
+		.headerMenuRow2 a {font-size:11px;color:#444444}
+
+
+/* top menu table */
+.menuTable {border-width:1px 0 0 0;border-color:#414142;border-style:solid}
+
+/* top menu row 1 */
+.menuRow1 {border-left:1px solid #B2B2B2;border-top:1px solid #B2B2B2;border-right:1px solid #414142}
+	.menuRow1.members {background:url("bg/hd_members.gif") repeat-x #608CD7}
+	.menuRow1.forums {background:url("bg/hd_packages.gif") repeat-x #69B191}
+	.menuRow1.modules {background:url("bg/hd_communicate.gif") repeat-x #DC8347}
+	.menuRow1.layouts {background:url("bg/hd_layouts.gif") repeat-x #BD9F0F}
+	.menuRow1.orders {background:url("bg/hd_stats.gif") repeat-x #76A76D}
+	.menuRow1.utilities {background:url("bg/hd_utilities.gif") repeat-x #D56157}
+	.menuRow1.settings {background:url("bg/hd_settings.gif") repeat-x #8957D5}
+	.menuRow1.general {background:url("bg/hd_general.gif") repeat-x #818181 !important}
+	/* menu links row 1 */
+	.menuRow1 a {display:block;padding:4px 24px;white-space:nowrap;font-size:12px;font-weight:bold;color:#ffffff}
+
+
+/* top menu row 2 */
+.menuRow2 {height:8px}
+	.menuRow2.members {background-color:#80B6E1}
+	.menuRow2.forums {background-color:#8ACAAD}
+	.menuRow2.modules {background-color:#E2A283}
+	.menuRow2.layouts {background-color:#D3C273}
+	.menuRow2.orders {background-color:#AAC69D}
+	.menuRow2.utilities {background-color:#E2838A}
+	.menuRow2.settings {background-color:#9981E2}
+
+/* top menu row 3 */
+.menuRow3 {padding:4px 24px 4px 24px;color:#282828;border-width:0 0 1px 0;border-style:solid;border-color:#C6C3C6}
+	.menuRow3.members {background:url("bg/hdb_members.gif") repeat-x #E3EDF9}
+	.menuRow3.forums {background:url("bg/hdb_packages.gif") repeat-x #DAEFE7}
+	.menuRow3.modules {background:url("bg/hdb_communicate.gif") repeat-x #F9ECE3}
+	.menuRow3.layouts {background:url("bg/hdb_layouts.gif") repeat-x #FDF3CE}
+	.menuRow3.orders {background:url("bg/hdb_stats.gif") repeat-x #ECF2EA}
+	.menuRow3.utilities {background:url("bg/hdb_utilities.gif") repeat-x #F8E0E0}
+	.menuRow3.settings {background:url("bg/hdb_settings.gif") repeat-x #E9E0F8}
+	/* menu links row 3 */
+	.menuRow3 a {color:#282828}
+
+
+
+/* footer table */
+.footerTable {border-width:1px 0;border-style:solid;border-color:#414142}
+	.footerRow {background:url('bg/ft_general.gif') repeat-x #848484;padding:4px 8px;text-align:right;color:#FFFFFF;border-top:1px solid #B2B2B2}
+		.footerRow a {color:#FFFFFF}
+
+/* nav table */
+.navTable {margin-bottom:8px;font-size:11px;border-bottom:1px solid #999999}
+	.navRow1 {padding-bottom:2px}
+	.navRow2 {font-size:11px;padding-bottom:2px}
+	/* navigation links */
+	.navTable a {font-size:12px;color:#444444}
+
+
+/* side table */
+.sideTable {background-color:#FFFFFF;margin-bottom:8px;font-size:11px;border:1px solid #CDCDCD}
+	.sideHeader {padding:4px;font-size:11px;border-bottom:1px solid #EFE8DA}
+	.sideRow {padding:4px 4px 4px 8px;font-size:11px}
+
+/* side menu links */
+a.opt {color:#444444}
+
+/* content table */
+.contentTable { background-color: #ffffff; }
+
+/* Content left side panel */
+.contentSide {border-width:0 1px 0 0;border-style:solid;border-color:#C9C7C9}
+	.contentSide.members {background-color:#F1F5F8}
+	.contentSide.forums {background-color:#F2F7F0}
+	.contentSide.modules {background-color:#F7F2EE}
+	.contentSide.layouts {background-color:#FDFAF1}
+	.contentSide.orders {background-color:#F2F7F0}
+	.contentSide.utilities {background-color:#F8F1EF}
+	.contentSide.settings {background-color:#EFECF4}
+
+
+/* grid table */
+.gridHeader,
+.gridTabs,
+.gridRow1,
+.gridRow2,
+.gridOptions,
+.gridActions,
+.gridLabels,
+.gridValue,
+.gridFooter {border-width:1px 1px 0 1px;border-style:solid;border-color:#ffffff}
+
+.gridTable {background-color:#A9B8C2;margin-bottom:8px}
+.gridBorder {border:1px solid #A9B8C2}
+.gridHeader {background-color:#ededed;padding:8px 4px;font-weight:bold;text-align:center;color:#333333}
+	.gridHeader a {color:#333333}
+.gridTabs {background-color:#ededed;padding:8px 4px;color:#333333}
+	.gridTabs a {font-weight:bold;color:#333333}
+.gridTr:hover td {background-color:#FFFAD5}
+.gridRow1 {background-color:#FDFDFD;padding:8px}
+.gridRow2 {background-color:#F9F9F9;padding:8px}
+.gridOptions {background-color:#F5F5F5;padding:6px;text-align:center}
+.gridActions {background-color:#F5F5F5;padding:6px;text-align:center}
+.gridLabels {background-color:#F5F5F5;padding:8px}
+.gridValue {background-color:#F9F9F9;padding:8px}
+	.gridValue .inputText {width:400px}
+.gridFooter {background-color:#ededed;margin-top:1px;padding:8px 6px}
+	.gridFooter p {margin:0;padding:8px 6px}
+	.gridFooter p.input {margin:0;padding:4px 8px;float:right}
+.gridFaded {color:#969696}
+
+/* Open options block */
+.gridActions {padding:0 !important}
+	.gridActions .action {background:url(action.gif) center no-repeat;padding:5px 14px}
+		.gridActions .action:hover,
+		.gridActions .action.active {background-color:#DBE3F2;padding:4px 13px;text-decoration:none;border:1px solid #AEB6C2}
+	.gridActions .opmenu {background:#ffffff;display:none;width:140px;padding:5px;list-style:none;position:absolute;text-align:left;border-radius:2px;border:1px solid #AEB6C2}
+	.gridActions .opmenu li {}
+		.gridActions .opmenu a {display:block;padding:5px 2px;font-size:10px;font-weight:bold;border-bottom:1px solid #dedede}
+			.gridActions .opmenu a:hover {background-color:#1785cd;padding-top:4px;text-decoration:none;color:#fff;border-width:1px 0;border-style:solid;border-color:#1068a1}
+
+/* messages */
+.errormsg {background:url('bg/errorbox.gif') repeat-x #FAE7E7;margin-bottom:8px;border:1px solid #811B1B}
+.infomsg {background:url('bg/infobox.gif') repeat-x #D9FFD9;margin-bottom:8px;border:1px solid #008A00}
+
+/* inline message */
+.inlinemsg {font-weight:normal;color:#444444}
+
+/* info for items */
+.infoText {font-size:10px}
+
+/* messages */
+.error_messages {padding:0 0 10px 20px} 
+	.error_messages h2 {margin:0;color:#ff0000}
+	.error_messages ul {margin:5px 0 0}
+		.error_messages ul li {list-style:outside;color:#b83e30}
+
+/* tooltips */
+.tooltipbox { filter: alpha(opacity=85); display: none; position: absolute; border: 1px solid #000000; background-color: #ffffff; padding: 4px; width: 150px }
+.toolpicbox { display: none; position: absolute; border: 1px solid #000000; }
+.toolpicbox img { width: 75px; }
+
+
+/* field items */
+ul.field_items {margin:0;padding:0;list-style:none}
+ul.field_items li  {margin:4px 0;padding:0}
+ul.field_items > li > ul {padding-bottom:15px}
+	ul.field_items li a {margin:0 1px}
+		ul.field_items li a img {border:0}
+	ul.field_items ul {list-style:none}
+ul.field_items li .inputText {width:400px}
+ul.field_items li .inputTextarea {width:250px}
+	.field_items .image_data {padding:4px 0}
+		.field_items .image_data label{display:block;float:left}
+			.field_items .image_data span {display:block;width:300px;padding:3px 0 0}
+
+/* Id fixed */
+.fixedParent {position:relative;padding-top:31px}
+	#fixed {position:absolute;width:100%;top:0}
+
+/* input */
+.inputText,
+.inputFile,
+.inputList,
+.inputCombo,
+.inputButton
+.inputTextarea {font-size:11px;font-family:Verdana;color:#000000;border-top:1px solid #999999;border-left:1px solid #999999;border-right:1px solid #C0C0C0;border-bottom:1px solid #C0C0C0}
+
+.inputText {padding:4px}
+.inputText:focus {background-color:#FFFFF0;border-top:1px solid #808080;border-left:1px solid #808080;border-right:1px solid #a0a0a0;border-bottom:1px solid #a0a0a0}
+.inputFile {padding:4px}
+.inputList {}
+.inputCombo {padding:2px}
+.inputButton   {border:1px solid #7B81A9;padding-left:4px;padding-right:4px}
+.inputTextarea {background-color:#ffffff;padding:4px}
+.inputTextarea:focus {background-color:#FFFFF0;border-top:1px solid #808080;border-left:1px solid #808080;border-right:1px solid #a0a0a0;border-bottom:1px solid #a0a0a0}
+.inputSubmit {background:url('button.gif') no-repeat;width:85px;height:21px;font-size:11px;font-family:Verdana;color:#000000;padding-bottom:2px;cursor:pointer;border:0}
+.inputGo {background:url('go.gif') no-repeat;width:16px;height:16px;padding:0px;cursor:pointer;border:0}
+.fielditems {margin:0;padding:0;width:550px;list-style-type:none;clear:left}
+	.fielditems li {margin:0;padding:0;width:33%;float:left;font-size:12px;font-family:Arial, Helvetica, sans-serif;color:#404040}
+		.fielditems li label {margin:0;padding:0}

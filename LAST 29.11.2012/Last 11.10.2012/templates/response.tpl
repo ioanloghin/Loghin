@@ -1,0 +1,1 @@
+{if isset($response)}{$response}{/if}

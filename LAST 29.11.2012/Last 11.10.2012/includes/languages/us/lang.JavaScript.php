@@ -1,0 +1,1 @@
+<?php$i18n = array(	'new_layout' =>	"New Layout",	'custInfo' =>	__('customize_info'),	'custError' =>	__('customize_error'),);

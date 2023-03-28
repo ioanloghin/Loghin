@@ -1,0 +1,12 @@
+Options +FollowSymLinks
+
+<IfModule mod_rewrite.c>
+
+RewriteEngine on
+RewriteBase /
+
+
+RewriteCond %{http_host} ^loghin.com [nc]
+RewriteRule ^(.*)$ http://www.loghin.com/$1 [r=301,nc]
+
+</IfModule>

@@ -1,0 +1,70 @@
+/* Inputs */
+.button,
+	.button span,
+	._button > * {background-image:url(buttons.png)}
+
+/* Scroll arrow */
+.scrollArrow {background-image:url(scrollArrows.png)}
+
+/* Header */
+#header {background:url(header_bg.png) repeat-x;color:#013458}
+	#header .left > a {text-shadow:1px 1px 1px #d2d7dc;color:#002d58}
+#customize {color:#7ca125}
+#header ._button_,
+	#header ._button_ > i,
+#customize,
+	#customize strong {background-image:url(customize_bg.png)}
+		#customize.selected strong {color:#388235}
+#custBlock {background:#eceff1}
+	#custBlock .cnt {background:url(customize_block_bg.png) left top repeat-x #fbf8f6}
+	#custBlock .info,
+	#custBlock .error {background:url(customize_info_bg.png) left top repeat-x}
+
+/* Body */
+#body {background-image:url(body_bg.jpg)}
+	#body ul li h2 a {text-shadow:0 1px 0 rgba(255, 255, 255, 0.3);color:#003960}
+	#body .logo {background:url(logo.png) no-repeat right bottom;width:593px;height:323px;top:95px;left:210px}
+
+/* Body Subcategories */
+#subcats .cnt {background:url(subcat_bg.png) top left repeat-x #f6f5f5}
+	#subcats .items a:hover {background:#bddeee}
+#subcats .info {background:url(subcat_info_bg.png) top left repeat-x;text-shadow:1px 0 0 #26679b}
+
+/* Content */
+#content {background:url(content_bg.png) repeat-x #e8ebf0}
+
+/* Search block */
+#content .inputSearch strong ,
+	#content .inputSearch strong i {background-image:url(search_bg.png)}
+
+/* Results */
+.resultsCats li a strong {text-shadow:#cbd2d9 1px 1px 1px;color:#35424a}
+.resultsCats li a:hover strong,
+.resultsCats li a.selected strong {text-shadow:#031535 1px 1px 1px;color:#f6f6f6}
+	.resultsCats li a.selected i,
+		.resultsCats li a.selected strong {background-image:url(results_cats_bg.png)}
+#results .content,
+	#results ._left,
+	#results ._right {background-image:url(results_bg.png)}
+		#results ._left > a,
+		#results ._right > a {background-image:url(arrows.png)}
+		#results .content li:hover {background:#dfeaf1}
+	#results .content li h2 {color:#023f82}
+
+
+
+/* Suggestion */
+#suggest .head > div > a {background-image:url(sugArrows.png)}
+#suggest .cnt {background:url(suggest_bg.png) left 0 repeat-x #f5f6f7}
+	#suggest .cnt > .left ul.top li > label {background:#c7deaa}
+#suggest .footer > a {background-image:url(suggest_options.png)}
+	#suggest .footer p a:hover {color:#1b75c7}
+
+/* Footer */
+#footer {background-image:url(footer_bg.jpg)}
+
+/* JsScroll */
+.jspTrack,
+.jspDrag {background-image:url(scroll_bg.png)}
+
+

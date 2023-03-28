@@ -1,0 +1,734 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Loghin System</title>
+		<link rel="stylesheet" type="text/css" href="/media/style.css" /> 
+		<link rel="stylesheet" type="text/css" href="/js/fancybox/fancybox.css" /> 
+		<script type="text/javascript" src="/js/jquery.js"></script>
+		<script type="text/javascript" src="/js/fancybox/fancybox.js"></script>
+		<script type="text/javascript" src="/js/jquery.scrollTo.js"></script>
+		<script type="text/javascript" src="/js/mousewheel.js"></script>
+		<script type="text/javascript" src="/js/scrollpane.js"></script>
+    </head>
+    
+    <body>
+		<!--// {* Header *} //-->
+    	<div id="header">
+        	<div class="width clear">
+            	<div class="left">
+                	<a href="#">Login In</a> &nbsp;|&nbsp;
+                    <a href="#">Sign Up</a> &nbsp;|&nbsp;
+                    <a href="#">Loghin WebSites</a>
+				</div>
+				<div class="right">
+					<select class="inputCombo" name="country">
+						<option value="">Country</option>
+					</select>
+					&nbsp;|&nbsp;
+					<select class="inputCombo" name="language">
+						<option value="">Language</option>
+					</select>
+				</div>
+ 				<a class="customize" href="javascript:void(0);"><strong>Customize Page</strong></a>
+				<!--// {* Customize block *} //-->
+				<div id="custBlock">
+					<div class="cnt clear">
+						<div class="left">
+							<h2>Categories</h2>
+							<div class="custItems">
+								<ul class="clear-li">
+									<li>
+										<div class="left"><img src="demo.png" alt="" /></div>
+										<div class="right clear">
+											<h3>People</h3>
+											<input class="inputCheckbox" type="checkbox" name="" value="" />
+											<div class="cfix"></div>
+											<p class="arial">Lorem ipsum dolor sit  am et, consectetur.</p>
+										</div>
+									</li>
+									<li>
+										<div class="left"><img src="demo.png" alt="" /></div>
+										<div class="right clear">
+											<h3>People</h3>
+											<input class="inputCheckbox" type="checkbox" name="" value="" />
+											<div class="cfix"></div>
+											<p class="arial">Lorem ipsum dolor sit  am et, consectetur.</p>
+										</div>
+									</li>
+									<li>
+										<div class="left"><img src="demo.png" alt="" /></div>
+										<div class="right clear">
+											<h3>People</h3>
+											<input class="inputCheckbox" type="checkbox" name="" value="" />
+											<div class="cfix"></div>
+											<p class="arial">Lorem ipsum dolor sit  am et, consectetur.</p>
+										</div>
+									</li>
+									<li>
+										<div class="left"><img src="demo.png" alt="" /></div>
+										<div class="right clear">
+											<h3>Business</h3>
+											<input class="inputCheckbox" type="checkbox" name="" value="" />
+											<div class="cfix"></div>
+											<p class="arial">Lorem ipsum dolor sit  am et, consectetur.</p>
+										</div>
+									</li>
+									<li>
+										<div class="left"><img src="demo.png" alt="" /></div>
+										<div class="right clear">
+											<h3>Finance</h3>
+											<input class="inputCheckbox" type="checkbox" name="" value="" />
+											<div class="cfix"></div>
+											<p class="arial">Lorem ipsum dolor sit  am et, consectetur.</p>
+										</div>
+									</li>
+									<li>
+										<div class="left"><img src="demo.png" alt="" /></div>
+										<div class="right clear">
+											<h3>Products</h3>
+											<input class="inputCheckbox" type="checkbox" name="" value="" />
+											<div class="cfix"></div>
+											<p class="arial">Lorem ipsum dolor sit  am et, consectetur.</p>
+										</div>
+									</li>
+								</ul>
+							</div>
+						</div>
+						<div class="right">
+							<h2>Applications</h2>
+							<div class="custItems">
+								<ul class="clear-li">
+									<li>
+										<div class="left"><img src="demo.png" alt="" /></div>
+										<div class="right clear">
+											<h3>Email</h3>
+											<input class="inputCheckbox" type="checkbox" name="" value="" />
+											<div class="cfix"></div>
+											<p class="arial">Lorem ipsum dolor sit  am et, consectetur.</p>
+										</div>
+									</li>
+									<li>
+										<div class="left"><img src="demo.png" alt="" /></div>
+										<div class="right clear">
+											<h3>Email</h3>
+											<input class="inputCheckbox" type="checkbox" name="" value="" />
+											<div class="cfix"></div>
+											<p class="arial">Lorem ipsum dolor sit  am et, consectetur.</p>
+										</div>
+									</li>
+									<li>
+										<div class="left"><img src="demo.png" alt="" /></div>
+										<div class="right clear">
+											<h3>Video</h3>
+											<input class="inputCheckbox" type="checkbox" name="" value="" />
+											<div class="cfix"></div>
+											<p class="arial">Lorem ipsum dolor sit  am et, consectetur.</p>
+										</div>
+									</li>
+									<li>
+										<div class="left"><img src="demo.png" alt="" /></div>
+										<div class="right clear">
+											<h3>Gallery</h3>
+											<input class="inputCheckbox" type="checkbox" name="" value="" />
+											<div class="cfix"></div>
+											<p class="arial">Lorem ipsum dolor sit  am et, consectetur.</p>
+										</div>
+									</li>
+									<li>
+										<div class="left"><img src="demo.png" alt="" /></div>
+										<div class="right clear">
+											<h3>Games</h3>
+											<input class="inputCheckbox" type="checkbox" name="" value="" />
+											<div class="cfix"></div>
+											<p class="arial">Lorem ipsum dolor sit  am et, consectetur.</p>
+										</div>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<div class="info error arial">Vestibulum sit amet purus massa, a euismod nunc. Curabitur pellente sque sem et quam gravida faucibus.</div>
+				</div>
+				<!--// {* End customize block *} //-->
+           </div>
+        </div>
+		<!--// {* End header *} //-->
+		<!--//{* Body content, categories *}//-->
+		<div id="body">
+			<div class="width clear">
+				<ul class="left clear-li">
+					<li class="first">
+						<div class="left icon"><a href="/ajax.php"><img src="media/icon_mask.png" alt="" /></a></div>
+						<h2 class="left"><a href="#">People</a></h2>
+					</li>
+					<li class="second">
+						<div class="left icon"><a href="/ajax.php"><img src="media/icon_mask.png" alt="" /></a></div>
+						<h2 class="left"><a href="#">Business</a></h2>
+					</li>
+					<li>
+						<div class="left icon"><a href="/ajax.php"><img src="media/icon_mask.png" alt="" /></a></div>
+						<h2 class="left"><a href="#">Finance</a></h2>
+					</li>
+					<li>
+						<div class="left icon"><a href="/ajax.php"><img src="media/icon_mask.png" alt="" /></a></div>
+						<h2 class="left"><a href="#">Products</a></h2>
+					</li>
+					<li class="second">
+						<div class="left icon"><a href="/ajax.php"><img src="media/icon_mask.png" alt="" /></a></div>
+						<h2 class="left"><a href="#">Services</a></h2>
+					</li>
+					<li class="first">
+						<div class="left icon"><a href="/ajax.php"><img src="media/icon_mask.png" alt="" /></a></div>
+						<h2 class="left"><a href="#">LifeStyle</a></h2>
+					</li>
+				</ul>
+				<ul class="right clear-li">
+					<li class="first">
+						<div class="right icon"><a href="#"><img src="media/icon_mask.png" alt="" /></a></div>
+						<h2 class="right"><a href="#">Email</a></h2>
+					</li>
+					<li class="second">
+						<div class="right icon"><a href="#"><img src="media/icon_mask.png" alt="" /></a></div>
+						<h2 class="right"><a href="#">Video</a></h2>
+					</li>
+					<li>
+						<div class="right icon"><a href="#"><img src="media/icon_mask.png" alt="" /></a></div>
+						<h2 class="right"><a href="#">Gallery</a></h2>
+					</li>
+					<li>
+						<div class="right icon"><a href="#"><img src="media/icon_mask.png" alt="" /></a></div>
+						<h2 class="right"><a href="#">Games</a></h2>
+					</li>
+					<li class="second">
+						<div class="right icon"><a href="#"><img src="media/icon_mask.png" alt="" /></a></div>
+						<h2 class="right"><a href="#">Forum</a></h2>
+					</li>
+					<li class="first">
+						<div class="right icon"><a href="#"><img src="media/icon_mask.png" alt="" /></a></div>
+						<h2 class="right"><a href="#">Chat</a></h2>
+					</li>
+				</ul>
+				<h1 class="logo">Loghin.com</h1>
+			</div>
+		</div>
+		<!--//{* End body content categories *}//-->
+		<!--// {* Content block *} //-->
+		<div id="content">
+			<div class="width">
+				<!--//{* Search block *}//-->
+				<div class="searchBox">
+				<form action="" method="post">
+					<div class="searchInput left">
+						<div class="_left"></div>
+						<input class="inputText" type="text" name="search" value="" />
+						<div class="_right"></div>
+					</div>
+					<a class="inputSearch left" href="javascript:void(0);" rel="submit"><strong>Search<i></i></strong></a>
+					<div class="cfix"></div>
+				</form>
+				</div>
+				<!--//{* End search block *}//-->
+
+				<!--//{* Results block *} //-->
+				<ul class="resultsCats width clear">
+					<li class="first"><a class="selected" href="#"><i class="_left"></i><strong>Cars long name here</strong><i class="_right"></i></a></li>
+					<li><a href="#"><i class="_left"></i><strong>Cars</strong><i class="_right"></i></a></li>
+					<li><a href="#"><i class="_left"></i><strong>Cars</strong><i class="_right"></i></a></li>
+					<li><a href="#"><i class="_left"></i><strong>Cars</strong><i class="_right"></i></a></li>
+					<li><a class="selected" href="#"><i class="_left"></i><strong>Cars</strong><i class="_right"></i></a></li>
+					<li><a href="#"><i class="_left"></i><strong>Cars</strong><i class="_right"></i></a></li>
+					<li><a href="#"><i class="_left"></i><strong>Cars</strong><i class="_right"></i></a></li>
+				</ul>
+				<div class="width" id="results">
+					<div class="_left"><a href="javascript:void(0);" rel="-">&laquo;</a></div>
+					<div class="content width">
+						<div class="space">
+							<div class="clear">
+								<ul class="clear">
+									<li>
+										<div class="image"><img src="reveal_pic.jpg" alt="" /></div>
+										<h2>Cars</h2>
+										<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+									</li>					
+									<li>
+										<div class="image"><img src="reveal_pic.jpg" alt="" /></div>
+										<h2>Cars</h2>
+										<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+									</li>					
+									<li>
+										<div class="image"><img src="reveal_pic.jpg" alt="" /></div>
+										<h2>Cars</h2>
+										<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+									</li>					
+									<li>
+										<div class="image"><img src="reveal_pic.jpg" alt="" /></div>
+										<h2>Cars</h2>
+										<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+									</li>					
+									<li>
+										<div class="image"><img src="reveal_pic.jpg" alt="" /></div>
+										<h2>Cars</h2>
+										<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+									</li>					
+									<li>
+										<div class="image"><img src="reveal_pic.jpg" alt="" /></div>
+										<h2>Cars</h2>
+										<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+									</li>					
+									<li>
+										<div class="image"><img src="reveal_pic.jpg" alt="" /></div>
+										<h2>Cars</h2>
+										<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+									</li>					
+									<li>
+										<div class="image"><img src="reveal_pic.jpg" alt="" /></div>
+										<h2>Cars</h2>
+										<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+									</li>					
+									<li>
+										<div class="image"><img src="reveal_pic.jpg" alt="" /></div>
+										<h2>Cars</h2>
+										<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+									</li>					
+								</ul>
+							</div>
+						</div>
+					</div>
+					<div class="_right"><a href="javascript:void(0);" rel="+">&raquo;</a></div>
+				</div>
+				<!--//{* End results block *}//-->
+				<!--// {* Suggestion block *} //-->
+				<div id="suggest">
+					<div class="head clear">
+						<div class="_left"><a href="javascript:void(0);" rel="-">&laquo;</a></div>
+						<div class="nav">
+							<div>
+								<div>
+									<ul>
+										<li class="first"><a href="#">Link Button 1</a></li>
+										<li><a href="#">Link Button 2</a></li>
+										<li><a href="#">Link Button 3</a></li>
+										<li><a href="#">Link Button 4</a></li>
+										<li><a href="#">Link Button 5</a></li>
+										<li><a href="#">Link Button 6</a></li>
+										<li><a href="#">Link Button 7</a></li>
+										<li><a href="#">Link Button 8</a></li>
+										<li><a href="#">Link Button 9</a></li>
+										<li><a href="#">Link Button 10</a></li>
+										<li><a href="#">Link Button 11</a></li>
+										<li><a href="#">Link Button 12</a></li>
+										<li class="last"><a href="#">Link Button 13</a></li>
+									</ul>
+								</div>
+							</div>
+						</div>
+						<div class="_right"><a href="javascript:void(0);" rel="+">&raquo;</a></div>
+					</div>
+					<div class="body">
+						<div class="bodySilver"></div>
+						<div class="cnt clear">
+							<!--// {* Left col *} //-->
+							<div class="left">
+								<ul class="top clear">
+									<li>
+										<label><input type="checkbox" name="" value="" /></label>
+										<a class="button green left" href="javascript:void(0);"><span>Add</span></a>
+										<p>
+											<a href="#">data</a> |
+											<a href="#">type</a>|
+											<a href="#">title</a>
+										</p>
+										<h3>Games</h3>
+									</li>
+								</ul>
+								<!--// {* Suggestion items *} //-->
+								<div class="clear itemsOverflow">
+									<div class="overflow">
+										<ul>
+											<li class="clear">
+												<label><input type="checkbox" name="" value="" /></label>
+												<div class="logo"><img src="uploads/suggest_logo.png" alt="" /></div>
+												<div class="details">
+													<div class="clear">
+														<h3>Assasins Creed 2</h3>
+														<span>10.07.2011</span>
+													</div>
+													<p>Nulla sit amet purus et mi commodo pulvinar vel eu quam...</p>
+												</div>
+											</li>
+											<li>
+												<label><input type="checkbox" name="" value="" /></label>
+												<div class="logo"><img src="uploads/suggest_logo.png" alt="" /></div>
+												<div class="details">
+													<div class="clear">
+														<h3>Assasins Creed 2</h3>
+														<span>10.07.2011</span>
+													</div>
+													<p>Nulla sit amet purus et mi commodo pulvinar vel eu quam...</p>
+												</div>
+											</li>
+											<li>
+												<label><input type="checkbox" name="" value="" /></label>
+												<div class="logo"><img src="uploads/suggest_logo.png" alt="" /></div>
+												<div class="details">
+													<div class="clear">
+														<h3>Assasins Creed 2</h3>
+														<span>10.07.2011</span>
+													</div>
+													<p>Nulla sit amet purus et mi commodo pulvinar vel eu quam...</p>
+												</div>
+											</li>
+											<li>
+												<label><input type="checkbox" name="" value="" /></label>
+												<div class="logo"><img src="uploads/suggest_logo.png" alt="" /></div>
+												<div class="details">
+													<div class="clear">
+														<h3>Assasins Creed 2</h3>
+														<span>10.07.2011</span>
+													</div>
+													<p>Nulla sit amet purus et mi commodo pulvinar vel eu quam...</p>
+												</div>
+											</li>
+											<li>
+												<label><input type="checkbox" name="" value="" /></label>
+												<div class="logo"><img src="uploads/suggest_logo.png" alt="" /></div>
+												<div class="details">
+													<div class="clear">
+														<h3>Assasins Creed 2</h3>
+														<span>10.07.2011</span>
+													</div>
+													<p>Nulla sit amet purus et mi commodo pulvinar vel eu quam...</p>
+												</div>
+											</li>
+											<li>
+												<label><input type="checkbox" name="" value="" /></label>
+												<div class="logo"><img src="uploads/suggest_logo.png" alt="" /></div>
+												<div class="details">
+													<div class="clear">
+														<h3>Assasins Creed 2</h3>
+														<span>10.07.2011</span>
+													</div>
+													<p>Nulla sit amet purus et mi commodo pulvinar vel eu quam...</p>
+												</div>
+											</li>
+											<li>
+												<label><input type="checkbox" name="" value="" /></label>
+												<div class="logo"><img src="uploads/suggest_logo.png" alt="" /></div>
+												<div class="details">
+													<div class="clear">
+														<h3>Assasins Creed 2</h3>
+														<span>10.07.2011</span>
+													</div>
+													<p>Nulla sit amet purus et mi commodo pulvinar vel eu quam...</p>
+												</div>
+											</li>
+										</ul>
+									</div>
+								</div>
+								<!--// {* End suggestion items *} //-->
+								<div class="bottomSpace"></div>
+							</div>
+							<!--// {* End left col *} //-->
+							<!--// {* Right col *} //-->
+							<div class="right">
+								<div class="overlay"></div>
+								<div class="optionsB">
+									<div class="headB line clear">
+										<label class="left">Setting:</label>
+										<a class="button red right bold" href="javascript:void(0);"><span>X</span></a>
+										<h3>Games</h3>
+									</div>
+									<div class="formFields line">
+										<p>Seleziona le schede delle notizie da visualizzare:</p>
+										<div class="clear">
+											<div class="formLabel">
+												<label for="visualTime">Visual Time:</label>
+											</div>
+											<div class="formField">
+												<select class="inputCombo" id="visualTime" name="">
+													<option value="">Days</option>
+												</select>
+											</div>
+										</div>
+
+										<div class="clear">
+											<div class="formLabel">
+												<label for="totalHits">Total Hits:</label>
+											</div>
+											<div class="formField">
+												<select class="inputCombo" id="totalHits" name="">
+													<option value="">Number</option>
+												</select>
+											</div>
+										</div>
+
+										<div class="clear">
+											<div class="formLabel">
+												<label for="visual">Visual:</label>
+											</div>
+											<div class="formField">
+												<select class="inputCombo" id="visual" name="">
+													<option value="">Type:</option>
+												</select>
+											</div>
+										</div>
+									</div>
+
+									<div class="formFields line">
+										<p>Processing System:</p>
+										<div class="clear">
+											<div class="formLabel">
+												<label for="modul1Activation">Modul 1 Activation</label>
+											</div>
+											<div class="formField">
+												<input class="inputCheckbox" id="modul1Activation" type="checkbox" name="" value="1" />
+											</div>
+										</div>
+
+										<div class="clear">
+											<div class="formLabel">
+												<label for="modul2Activation">Modul 2 Activation</label>
+											</div>
+											<div class="formField">
+												<input class="inputCheckbox" id="modul2Activation" type="checkbox" name="" value="1" />
+											</div>
+										</div>
+
+										<div class="clear">
+											<div class="formLabel">
+												<label for="archive">Arhive:</label>
+											</div>
+											<div class="formField">
+												<select class="inputCombo" id="archive" name="">
+													<option value="">Select</option>
+												</select>
+											</div>
+										</div>
+
+										<div class="clear">
+											<div class="formLabel">
+												<label for="newsletter">Newsletter</label>
+											</div>
+											<div class="formField">
+												<input class="inputCheckbox" id="newsletter" type="checkbox" name="" value="1" />
+											</div>
+										</div>
+									</div>
+
+									<div class="formFields line">
+										<p>Form options:</p>
+										<div class="clear">
+											<div class="formOptions">
+												<label><input type="checkbox" name="" value="1"> Link Button</label>
+												<label><input type="checkbox" name="" value="1"> Link Button</label>
+												<label><input type="checkbox" name="" value="1"> Link Button</label>
+												<label><input type="checkbox" name="" value="1"> Link Button</label>
+												<label><input type="checkbox" name="" value="1"> Link Button</label>
+												<label><input type="checkbox" name="" value="1"> Link Button</label>
+												<label><input type="checkbox" name="" value="1"> Link Button</label>
+												<label><input type="checkbox" name="" value="1"> Link Button</label>
+											</div>
+										</div>
+									</div>
+
+									<div class="formFields">
+										<div class="clear">
+											<div class="formButton"><a class="button green bold" href="javascript:void(0);" rel="submit"><span>Save</span></a></div>
+										</div>
+									</div>
+								</div>
+
+								<ul class="top clear">
+									<li>
+										<label><input type="checkbox" name="" value="" /></label>
+										<a class="button red left" href="javascript:void(0);"><span>Delete</span></a>
+										<p>
+											<a href="#">data</a> |
+											<a href="#">type</a>|
+											<a href="#">title</a>
+										</p>
+										<h3>My Box</h3>
+									</li>
+								</ul>
+								<!--// {* Suggestion items *} //-->
+								<div class="clear itemsOverflow">
+									<div class="overflow">
+										<ul>
+											<li class="clear">
+												<label><input type="checkbox" name="" value="" /></label>
+												<div class="logo"><img src="uploads/suggest_logo.png" alt="" /></div>
+												<div class="details">
+													<div class="clear">
+														<h3>Assasins Creed 2</h3>
+														<span>10.07.2011</span>
+													</div>
+													<p>Nulla sit amet purus et mi commodo pulvinar vel eu quam...</p>
+												</div>
+											</li>
+										</ul>
+									</div>
+								</div>
+								<!--// {* End suggestion items *} //-->
+								<div class="bottomSpace"></div>
+							</div>
+							<!--// {* End right col *} //-->
+							<div class="bottomOptions clear left">
+								<a class="options" href="#">Select suggestion option</a>
+								<a class="more" href="#">more...</a>
+							</div>
+							<div class="bottomOptions clear right">
+								<a class="options" href="#">Select suggestion option</a>
+								<a class="more" href="#">more...</a>
+							</div>
+							<div class="line"><div></div></div>
+						</div>
+					</div>
+					<!--// {* Button open & close *} //-->
+					<div class="footer clear">
+						<p>
+							<a href="#">Link Button</a> |
+							<a href="#">Link Button</a> |
+							<a href="#">Link Button</a> |
+							<a href="#">Link Button</a> |
+							<a href="#">Link Button</a> |
+							<a href="#">Link Button</a> |
+							<a href="#">Link Button</a> |
+							<a href="#">Link Button</a>
+						</p>
+						<a href="javascript:void(0);" rel="OpenClose">Close</a>
+					</div>
+					<!--// {* End button open & close *} //-->
+				</div>
+				<!--// {* End Suggestion block *} //-->
+			</div>
+		</div>
+		<!--// {* End content block *} //-->
+
+		<!--// {* Footer *} //-->
+		<div id="footer">
+			<div class="width">
+				<p class="left">
+					<a href="#">Marketing / Advertise</a> &bull;
+					<a href="#">Terms of service</a> &bull;
+					<a href="#">Privacy</a> &bull;
+					<a href="#">You opinion</a> &bull;
+					<a href="#">Work with us</a>
+				</p>
+        		<p class="right">Copyright &copy; 2009 - 2011 Loghin. All rights reserved.</div> 
+			</div>
+		</div>
+		<!--// {* End footer *} //-->
+		<script type="text/javascript">
+		$(function()
+		{
+			setTimeout(function() {$('#custBlock').addClass('hide');}, 200);
+			$('#header .customize').bind('click', function()
+			{
+				if ($('#custBlock:visible').length == 0)
+				{	
+					/* Show block */
+					$._this = this;
+					$('#custBlock').removeClass('hide');
+					$($._this).addClass('selected');
+	
+					setTimeout(function()
+					{
+						$(document).bind('click', function()
+						{
+							$('#custBlock').addClass('hide');
+							$($._this).removeClass('selected');
+							$(document).unbind('click');
+						});
+					}, 100);
+				}
+			});
+			$('#custBlock').bind('click', function(e) {
+				e.stopPropagation();
+			});
+			$('a[rel="OpenClose"]').bind('click', function(e)
+			{
+				var obj = $('#suggest .body .cnt');
+				var thisObj = $(this);
+				if (thisObj.hasClass('open')) {
+					obj.removeClass('hide');
+					thisObj.removeClass('open').text('Close');
+				}
+				else {
+					obj.addClass('hide');
+					thisObj.addClass('open').text('Open');
+				}
+			});
+
+			$("#body li .icon > a").fancybox({
+				'padding': 0,
+				'hideOnOverlayClick': false,
+				'scrolling': false,
+				'overlayShow': true,
+				'overlayOpacity': '0.4',
+				'overlayColor': '#000000',
+				'onComplete' : function() {
+					$('#fancybox-outer, #fancybox-content').css('border-radius', '6px');
+					$("#fancybox-wrap").css({'top':'80px', 'bottom':'auto'});
+				},
+				ajax: {
+					'type': "POST",
+					'data': 'mydata=test'
+				}
+			});
+
+			$('#results > div > a').bind('click', function()
+			{
+				var obj =  $('#results .space');
+				var width = $(obj).width();
+				var itemWidth = $(obj).find('ul').width() - 1;
+				var scrollLeft =  $(this).attr('rel') == '-' ? ($(obj).scrollLeft() - width) : ($(obj).scrollLeft() + width);
+				if ((scrollLeft + width) > itemWidth) {
+					scrollLeft = itemWidth - width;
+				}
+				$(obj).scrollTo({ 'left': scrollLeft +'px', 'top': 0}, 500);
+			});
+
+			$('#suggest .head > div > a').bind('click', function()
+			{
+				if ($(this).hasClass('disabled')) {
+					return false;
+				}
+
+				var parent = $(this);
+				var obj =  $(this).parents('.head').find('.nav > div');
+				var _left = $('#suggest .head > div._left > a');
+				var _right = $('#suggest .head > div._right > a');
+				var width = $(obj).width();
+				var itemWidth = $('ul', obj).width();
+				var scrollLeft = $(this).attr('rel') == '-' ? ($(obj).scrollLeft() - (width / 2)) : ($(obj).scrollLeft() + (width / 2));
+				if ((scrollLeft + width) > itemWidth) {
+					scrollLeft = itemWidth - width;
+				}
+				$(obj).scrollTo({ 'left': scrollLeft +'px', 'top': 0}, 500, function()
+				{
+					if ($(obj).scrollLeft() + width >= itemWidth) {
+						_right.addClass('disabled');
+					}
+					else if (_right.hasClass('disabled') && ($(obj).scrollLeft() + width) < itemWidth) {
+						_right.removeClass('disabled');
+					}
+					if ($(obj).scrollLeft() == 0) {
+						_left.addClass('disabled');
+					}
+					else if (_left.hasClass('disabled')) {
+						_left.removeClass('disabled');
+					}
+				});
+			});
+			if ($('#suggest .head .nav > div').scrollLeft() == 0) {
+				$('#suggest .head > div._left > a').addClass('disabled');
+			}
+	
+			$('.itemsOverflow .overflow').jScrollPane();
+			$('#custBlock .custItems').jScrollPane();
+		});
+
+		</script>
+    </body>
+</html>

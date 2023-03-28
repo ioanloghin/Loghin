@@ -1,0 +1,95 @@
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteRule (.*) index.php/$1 [L]
+</IfModule>
+<IfModule !mod_rewrite.c>
+    ErrorDocument 404 /index.php
+</IfModule>
+
+# Options +FollowSymLinks 
+# Options -Indexes
+# RewriteEngine On
+
+
+# particular
+# RewriteRule ^(user)/([a-z0-9_]+)-([0-9]+)/$ index.php?page=tree&AGmyIDUser=$3 [NC,L]
+
+# RewriteRule ^(search)/$ index.php?controller=search&page=index [NC,L]
+# RewriteRule ^(search)/([a-zA-Z0-9_\-]+)/$ index.php?controller=search&page=$2 [NC,L]
+# RewriteRule ^(company)-([0-9]+)/$ index.php?controller=company&param1=$2 [NC,L]
+
+# RewriteRule ^(tree)-([0-9]+)/$ index.php?page=tree&AGmyIDTree=$2 [NC,L]
+# RewriteRule ^(tree)-([0-9]+)/([0-9]+)/$ index.php?page=tree&AGmyIDTree=$2&AGmyIDUser=$3 [NC,L]
+# RewriteRule ^(tree)-([0-9]+)/([0-9]+)/(asc|desc)$ index.php?page=tree&AGmyIDTree=$2&AGmyIDUser=$3&AGmyDirection=$4 [NC,L]
+# RewriteRule ^(tree)-([0-9]+)/([0-9]+)/([a-z0-9_]+).html$ index.php?page=tree_$4&AGmyIDTree=$2&AGmyIDUser=$3 [NC,L]
+
+# RewriteRule ^(tree)-([0-9]+)/([0-9]+)/(media)/$ index.php?page=tree_$4&AGmyIDTree=$2&AGmyIDUser=$3 [NC,L]
+# RewriteRule ^(tree)-([0-9]+)/([0-9]+)/(media)/(photo|story|audio|video)/$ index.php?page=tree_$4&AGmyIDTree=$2&AGmyIDUser=$3&section=$5 [NC,L]
+# RewriteRule ^(tree)-([0-9]+)/([0-9]+)/(media)/(photo|story|audio|video)/add$ index.php?page=tree_$4&AGmyIDTree=$2&AGmyIDUser=$3&section=$5&add=1 [NC,L]
+# RewriteRule ^(tree)-([0-9]+)/([0-9]+)/(media)/(photo|story|audio|video)/([0-9]+)$ index.php?page=tree_$4&AGmyIDTree=$2&AGmyIDUser=$3&section=$5&article_id=$6 [NC,L]
+
+# RewriteRule ^(tree)-([0-9]+)/([0-9]+)/(facts)/$ index.php?page=tree_$4&AGmyIDTree=$2&AGmyIDUser=$3 [NC,L]
+# RewriteRule ^(tree)-([0-9]+)/([0-9]+)/(facts)/add$ index.php?page=tree_$4&AGmyIDTree=$2&AGmyIDUser=$3&add=1 [NC,L]
+# RewriteRule ^(tree)-([0-9]+)/([0-9]+)/(sources)/$ index.php?page=tree_facts&AGmyIDTree=$2&AGmyIDUser=$3&section=$4 [NC,L]
+# RewriteRule ^(tree)-([0-9]+)/([0-9]+)/(sources)/add$ index.php?page=tree_facts&AGmyIDTree=$2&AGmyIDUser=$3&section=$4&add=1 [NC,L]
+
+
+# RewriteRule ^preview/(tree)-([0-9]+)/$ index.php?page=tree&AGmyIDTree=$2&preview [NC,L]
+# RewriteRule ^preview/(tree)-([0-9]+)/([0-9]+)/$ index.php?page=tree&AGmyIDTree=$2&AGmyIDUser=$3&preview [NC,L]
+# RewriteRule ^preview/(tree)-([0-9]+)/([0-9]+)/(asc|desc)$ index.php?page=tree&AGmyIDTree=$2&AGmyIDUser=$3&AGmyDirection=$4&preview [NC,L]
+# RewriteRule ^preview/(tree)-([0-9]+)/([0-9]+)/([a-z0-9_]+).html$ index.php?page=tree_$4&AGmyIDTree=$2&AGmyIDUser=$3&preview [NC,L]
+
+# RewriteRule ^(create)([0-9]+).xhtml$ index.php?page=$1&step=$2 [NC,L]
+
+
+# RewriteRule ^([a-z0-9_]+).html$ index.php?page=$1 [NC,L]
+# RewriteRule ^([a-z0-9_]+).xhtml$ index.php?page=$1 [NC,L]
+# RewriteRule ^([a-z0-9_]+)/$ index.php?page=$1 [NC,L]
+
+
+
+# pentru erori
+# ErrorDocument 403 /module/error_403.php
+# ErrorDocument 404 /module/error_404.php
+# ErrorDocument 500 /module/error_500.php
+
+# BEGIN cPanel-generated php ini directives, do not edit
+# Manual editing of this file may result in unexpected behavior.
+# To make changes to this file, use the cPanel MultiPHP INI Editor (Home >> Software >> MultiPHP INI Editor)
+# For more information, read our documentation (https://go.cpanel.net/EA4ModifyINI)
+<IfModule php5_module>
+   php_flag asp_tags Off
+   php_flag display_errors On
+   php_value max_execution_time 30
+   php_value max_input_time 60
+   php_value max_input_vars 1000
+   php_value memory_limit 32M
+   php_value post_max_size 8M
+   php_value session.gc_maxlifetime 1440
+   php_value session.save_path "/var/cpanel/php/sessions/ea-php56"
+   php_value upload_max_filesize 2M
+   php_flag zlib.output_compression Off
+</IfModule>
+<IfModule lsapi_module>
+   php_flag asp_tags Off
+   php_flag display_errors On
+   php_value max_execution_time 30
+   php_value max_input_time 60
+   php_value max_input_vars 1000
+   php_value memory_limit 32M
+   php_value post_max_size 8M
+   php_value session.gc_maxlifetime 1440
+   php_value session.save_path "/var/cpanel/php/sessions/ea-php56"
+   php_value upload_max_filesize 2M
+   php_flag zlib.output_compression Off
+</IfModule>
+# END cPanel-generated php ini directives, do not edit
+
+# php -- BEGIN cPanel-generated handler, do not edit
+# Set the “ea-php56” package as the default “PHP” programming language.
+<IfModule mime_module>
+  AddHandler application/x-httpd-ea-php56 .php .php5 .phtml
+</IfModule>
+# php -- END cPanel-generated handler, do not edit

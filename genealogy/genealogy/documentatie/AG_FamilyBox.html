@@ -1,0 +1,118 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>clasa AG_FamilyBox</title>
+<link rel="stylesheet" type="text/css" href="images/style.css" />
+</head>
+
+<body>
+<ul class="menu">
+	<li>&rsaquo; <a href="AG_Operation.html">Clasa AG_Operation</a></li>
+    <li>&rsaquo; <a href="AG_UserBox.html">Clasa AG_UserBox</a></li>
+    <li>&rsaquo; <span>Clasa AG_FamilyBox</span></li>
+    <li>&rsaquo; <a href="SQL_DB.html">Clasa SQL_DB</a></li>
+</ul>
+<br /><br /><br />
+<h1>Clasa AG_FamilyBox</h1>
+<blockquote>
+	<p>Este o clasa obiect ce permite pozitionarea si afisarea divului in care sunt asezate casutele utilizatorilor, in diagrama arborelui.</p>
+    <p class="important">Clasa AG_FamilyBox nu extinde nici o alta clasa.<br />Adresa locala: codes/clase/AG_FamilyBox.php<br />Pentru a crea un obiect folosind aceasta clasa, apelati <strong>$myFamilyObj = new AG_FamilyBox();</strong></p>
+    <ul class="class_var">
+    	<li>public <strong>$identifier</strong> = array('key' => NULL, 'parent_key' => NULL); <span class="gri">// codul unic de identificare al familiei si al familiei parinte</span></li>
+    	<li>private <strong>$recognition</strong> = array('type' => 1, 'align' => NULL, 'grade' => 0); <span class="gri">// 1-familia principala|2-fam. descendenta extinsa|3-fam. descendenta compacta|4-fam. relatie</span></li>
+        <li>public <strong>$width</strong> = 0; <span class="gri">// latimea containerului</span></li>
+        <li>public <strong>$height</strong> = 0; <span class="gri">// inaltimea containerului</span></li>
+        <li>public <strong>$posX</strong> = 0; <span class="gri">// coordonata X in raport cu box-ul familiei</span></li>
+        <li>public <strong>$posY</strong> = 0; <span class="gri">// coordonata Y in raport cu box-ul familiei</span></li>
+        <li>public <strong>$marginLeft</strong> = 0; <span class="gri">// distanta pe axa 0X</span></li>
+        <li>public <strong>$marginTop</strong> = 0; <span class="gri">// distanta pe axa 0Y</span></li>
+        <li>private <strong>$info</strong> = array(); <span class="gri">// lista cu informatii despre familie (id, nume etc.)</span></li>
+        <li>private <strong>$members_ref</strong> = array(); <span class="gri">// contine o lista cu referinte catre obiectele utilizatorilor</span></li>
+        
+    </ul>
+</blockquote>
+<br /><br />
+<h2>Functia <strong>__construct</strong>()</h2> 
+<blockquote>
+	<p>Fiind constructorul clasei, acest atribuie variablilei o referinta catre obiectul creat.</p>
+	<pre>$myFamilyBox = new AG_FamilyBox();</pre>
+</blockquote>
+
+<h2>Functia <strong>setInfo</strong>($info = array())</h2> 
+<blockquote>
+	<p>Este o functie de intrare (nu are return).<br />Atribuie variabilelor $info din interiorul obiectului valorile mentionate (sub forma de lista).</p>
+	<pre>$info = array(
+    'id'   => 13,
+    'name' => 'Popescu'
+);
+
+$myFamilyBox->setInfo($info);</pre>
+</blockquote>
+
+<h2>Functia <strong>setMembers</strong>($members_ref = array())</h2> 
+<blockquote>
+	<p>Este o functie de intrare (nu are return).<br />Atribuie variabilelor $members_ref din interiorul obiectului valoarea mentionata (sub forma de lista).</p>
+	<pre>$obj_user25 = new AG_UserBox(); // obiectul tatalui
+$obj_user11 = new AG_UserBox(); // obiectul mamei
+$obj_user19 = new AG_UserBox(); // obiectul copilui 1
+$obj_user12 = new AG_UserBox(); // obiectul copilui 2
+
+$members_ref = array($obj_user25, $obj_user11, array($obj_user19, $obj_user12));
+
+$myFamilyBox->setMembers($members_ref);</pre>
+Daca unul din membri nu este valabil se va nota cu NULL
+<pre>$obj_user25 = new AG_UserBox(); // obiectul tatalui
+$obj_user19 = new AG_UserBox(); // obiectul copilui 1
+$obj_user12 = new AG_UserBox(); // obiectul copilui 2
+
+$members_ref = array($obj_user25, NULL, array($obj_user19, $obj_user12));
+
+$myFamilyBox->setMembers($members_ref);</pre>
+</blockquote>
+
+<h2>Functia <strong>setPosition</strong>($identifier, $recognition)</h2> 
+<blockquote>
+	<p>Atribuie variabilelor $identifier si $recognition valorile trimise ca parametrii.</p>
+	<pre>$identifier = array(
+    'identifier'   => '010',
+    'identifier_parent' => '01'
+);
+
+$recognition = array(
+    'type'   => 3,
+    'align' => NULL,
+    'grade' => 4
+);
+
+$myFamilyBox->setPosition($identifier, $recognition);</pre>
+</blockquote>
+
+<h2>Functia <strong>calculateMembersCoord</strong>()</h2> 
+<blockquote>
+	<p>Trimite o cerere catre functia din interiorul obiectelor membrilor (AG_UserBox::setCoord()) care calculeaza punctele de coordonate ($posX si $posY) pentru fiecare membru in parte.</p>
+    <p class="important">Inainte de folosirea acestei functii, trebuie sa aveti obiectele membrilor inregistrate in $members_ref.</p>
+</blockquote>
+
+<h2>Functia <strong style="color:#F90;">setDimension</strong>()</h2> 
+<blockquote>
+	<p>Functie privata (nu poate fi apelata din exterior).<br />Atribuie variabilelor $width si $height din interiorul obiectului valorile corespunz&#259;toare (in px).<br />
+    Aceasta functie este apelata in interiorul metodei setRecog().</p>
+    <p class="important">Pentru stabilirea dimensiunilor are nevoie ca variabilele <strong>$type</strong> si <strong>$members_ref</strong> sa fie setate.</p>
+</blockquote>
+
+<h2>Functia <strong style="color:#F90;">setCoord</strong>()</h2> 
+<blockquote>
+	<p>Functie privata (nu poate fi apelata din exterior).<br />Atribuie variabilelor $posX si $posY din interiorul obiectului valorile corespunz&#259;toare (in px).<br />
+    Aceasta functie este apelata in interiorul metodei setRecog().</p>
+    <p class="important">Pentru stabilirea coordonatelor are nevoie ca variabilele <strong>$type</strong>, <strong>$align</strong> si <strong>$grad</strong> sa fie setate.</p>
+</blockquote>
+
+<h2>Functia <strong style="color:#F90;">setFixed</strong>($type, $align = NULL)</h2> 
+<blockquote>
+	<p>Functie privata (nu poate fi apelata din exterior).<br />Atribuie variabilelor $marginLeft si $marginTop din interiorul obiectului valorile corespunz&#259;toare (in px) in functie de tipul familiei.<br />Spre exemplu: pentru $type = 1, 2 sau 3, va fi pozitionat (central, sus) fata de punctul de coordonate (x, y);<br />pentru $type = 4 si $align = 'left', acesta va fi pozitionat in (stanga, 80%) iar daca $align = 'right' va fi pozitionat in (dreapta, 80%)<br />
+    Aceasta functie este apelata in interiorul metodei setRecog() dupa setCoord().</p>
+    <p class="important">Pentru a fixa obiectul are nevoie ca variabilele <strong>$width</strong>, <strong>$height</strong>, <strong>$posX</strong> si <strong>$posY</strong> sa fie setate.</p>
+</blockquote>
+
+</body>
+</html>

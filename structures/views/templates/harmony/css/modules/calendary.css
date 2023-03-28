@@ -1,0 +1,13 @@
+/* calendary */
+.agcalendary-box {width:300px;height:250px;background-attachment:scroll;background-clip:border-box;background-color:transparent;background-origin:padding-box;background-position:-20px 0;background-repeat:no-repeat;background-size:auto;background-image:url(../../images/layout2/calendary.png)}
+.agcalendary-box .agcalendary-box-head {width:235px;height:35px;margin:30px 0 0 20px;display:block;float:left}
+.agcalendary-box .agcalendary-bhb1 {width:140px;height:30px;margin:0 0 0 5px;display:block;float:left}
+.agcalendary-box .agcalendary-bhb1_L {width:20px;height:30px;float:left}
+.agcalendary-box .agcalendary-bhb1_R {width:110px;height:30px;float:left;margin-left:10px;color:#FFF;font-size:18px;line-height:32px;font-family:Arial}
+.agcalendary-box .agcalendary-bhb2 {width:80px;height:30px;margin:0 0 0 5px;display:block;float:left}
+.agcalendary-box .agcalendary-bhb2_L {width:50px;height:30px;float:left;margin-right:10px;color:#FFF;font-size:18px;line-height:32px;text-align:right;font-family:Arial}
+.agcalendary-box .agcalendary-bhb2_R {width:20px;height:30px;float:left}
+.agcalendary-box .agcalendary-box-th {width:248px;height:17px;margin:7px 0 0 13px;display:block}
+.agcalendary-box .agcalendary-box-th li {width:35px;height:17px;line-height:17px;text-align:center;font-size:12px;display:block;float:left;color:#036;margin:0}
+.agcalendary-box .agcalendary-box-days {width:248px;height:137px;margin:0 0 0 13px;display:block}
+.agcalendary-box .agcalendary-box-days li {width:35px;height:28px;line-height:28px;text-align:center;font-size:16px;font-weight:bold;display:block;float:left;margin:0}

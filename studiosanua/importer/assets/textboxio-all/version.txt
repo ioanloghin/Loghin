@@ -1,0 +1,8 @@
+Textbox.io 2.2.0.142
+Client build 2.2.0.158
+
+Included service versions:
+* ephox-hyperlinking: 1.3.7
+* ephox-spelling: 1.4.0
+* ephox-image-proxy: 1.3.2
+* ephox-allowed-origins: 1.3.0

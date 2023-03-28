@@ -1,0 +1,67 @@
+/* quick Edit User */
+#quickEditUser { display:none; }
+.quickEditUser {display:block; position:fixed;left:50%; top:50%; z-index:14;margin-left:-225px; margin-top:-125px;width:450px; height:249px;background-attachment:scroll;background-clip:border-box;background-color:transparent;background-image:url(../../images/layout2/quick-edit.png);background-origin:padding-box;background-position:0 0;background-repeat:no-repeat;background-size:auto;}
+.qEUBlue {display:none;background-image:url(../../images/layout2/quick-edit_blue.png) !important;z-index:13 !important;}
+.qEURed {display:none;background-image:url(../../images/layout2/quick-edit_red.png) !important;z-index:13 !important;}
+.qEUBlue .boxLink,
+.qEURed .boxLink {position:absolute; z-index:15;width:112px; height:216px;background-attachment:scroll;background-clip:border-box;background-color:transparent;background-image:url(../../images/layout2/box_link.png);background-origin:padding-box;background-position:0 0;background-repeat:no-repeat;background-size:auto;margin-top:17px;-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";filter: alpha(opacity=0);opacity:0;}
+.qEUBlue .boxLink { margin-left:-96px; }
+.qEURed .boxLink { margin-left:434px; }
+.quickEditUser .topMiniBox1 { float:left; width:110px; height:30px; margin-top:18px; margin-left:20px; }
+.quickEditUser .topMiniBox2 { float:left; width:190px; height:30px; margin-top:18px; }
+.quickEditUser .topMiniBox2 span { display:block; height:24px; line-height:24px; color:#FFF; text-align:center; font-family:Arial, Helvetica, sans-serif; margin:0 5px; font-size:18px; text-shadow:1px 1px #697d32; }
+.quickEditUser .topMiniBox_BT1,
+.quickEditUser .topMiniBox_BT2,
+.quickEditUser .topMiniBox_BT1_d,
+.quickEditUser .topMiniBox_BT2_d,
+.quickEditUser .topMiniBox_BT1_,
+.quickEditUser .topMiniBox_BT2_ { display:block; height:22px; line-height:22px; width:90px; margin-left:2px; margin-top:3px; border:1px solid #d3ccc4; -webkit-border-radius: 5px; -moz-border-radius: 5px; border-radius: 5px; font-family:Arial, Helvetica, sans-serif; font-size:12px; color:#006ebe; font-weight:bold; letter-spacing:0px; padding-left:0px; background-position:left 0; background-repeat:repeat-x; cursor:pointer !important; }
+.quickEditUser .topMiniBox_BT1 { color:#F00; }
+.quickEditUser .topMiniBox_BT2,
+.quickEditUser .topMiniBox_BT2_d,
+.quickEditUser .topMiniBox_BT2_ { margin-left:15px; }
+.quickEditUser .topMiniBox_BT1_d,
+.quickEditUser .topMiniBox_BT2_d{ cursor:default !important; color:#c2b9aa; }
+.quickEditUser .topMiniBox_BT1:hover,
+.quickEditUser .topMiniBox_BT1_ { background-image:url(../../images/layout2/topMiniBox_BT_red.gif); color:#FFF; border-color:#463b35; }
+.quickEditUser .topMiniBox_BT2:hover,
+.quickEditUser .topMiniBox_BT2_ { background-image:url(../../images/layout2/topMiniBox_BT_.gif); color:#FFF; border-color:#463b35; }
+.quickEditUser .topMiniBox_BT1 .icon,
+.quickEditUser .topMiniBox_BT2 .icon,
+.quickEditUser .topMiniBox_BT1_d .icon,
+.quickEditUser .topMiniBox_BT2_d .icon,
+.quickEditUser .topMiniBox_BT1_ .icon,
+.quickEditUser .topMiniBox_BT2_ .icon { float:left; width:20px; height:22px; margin-right:8px; cursor:pointer !important; }
+.quickEditUser .topMiniBox_BT1_d .icon,
+.quickEditUser .topMiniBox_BT2_d .icon { -ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=60)"; filter:alpha(opacity=60); opacity:0.6; cursor:default !important; }
+.quickEditUser .topMiniBox_BT1 .icon { background-image:url(../../images/layout2/topMiniBox_BT1.png); }
+.quickEditUser .topMiniBox_BT2 .icon { background-image:url(../../images/layout2/topMiniBox_BT2.png); }
+.quickEditUser .topMiniBox_BT1_d .icon { background-image:url(../../images/layout2/topMiniBox_BT1_d.png); }
+.quickEditUser .topMiniBox_BT2_d .icon { background-image:url(../../images/layout2/topMiniBox_BT2_d.png); }
+.quickEditUser .topMiniBox_BT1:hover .icon,
+.quickEditUser .topMiniBox_BT1_ .icon { background-image:url(../../images/layout2/topMiniBox_BT1_.png); }
+.quickEditUser .topMiniBox_BT2:hover .icon,
+.quickEditUser .topMiniBox_BT2_ .icon { background-image:url(../../images/layout2/topMiniBox_BT2_.png); }
+.quickEditUser .topMiniBox3 { float:left; width:110px; height:30px; margin-top:18px; }
+.quickEditUser .topMiniBox4 { display:block; position:relative; width:410px; height:145px; margin-top:4px; margin-left:20px; }
+.quickEditUser .topMiniBox4_img { float:left; width:121px; height:137px; margin-left:10px; margin-top:8px; text-align:center; }
+.quickEditUser .topMiniBox4_img img { display:block; margin-bottom:3px; width:115px; height:115px; border:2px solid #af9a80; -webkit-border-radius:2px; -moz-border-radius:2px; border-radius:2px; padding:1px; }
+.quickEditUser .topMiniBox4_img a { color:#5b504a; }
+.quickEditUser .topMiniBox4_img a:hover { color:#006ebe; text-decoration:underline; }
+.quickEditUser .topMiniBox4_details { float:left; margin-left:10px; width:260px; height:140px; }
+.quickEditUser .topMiniBox4_details_c1 { float:left; line-height:16px; margin-top:5px; width:130px; height:60px; }
+.quickEditUser .topMiniBox4_details_c2 { float:left; line-height:16px; margin-top:5px; width:130px; height:60px; }
+.quickEditUser .topMiniBox4_details_c3 { float:left; line-height:14px; margin-top:5px; width:260px; height:60px; font-style:italic; }
+.quickEditUser .topMiniBox5 { float:left; width:200px; height:29px; line-height:29px; margin-top:5px; margin-left:20px; text-align:center; }
+.quickEditUser .topMiniBox6  { float:left; width:200px; height:29px; line-height:29px; margin-top:5px; text-align:center; }
+.quickEditUser .topMiniBox5 a,
+.quickEditUser .topMiniBox6 a { font-family:Arial, Helvetica, sans-serif; font-size:14px; color:#FFF; font-weight:bold; letter-spacing:1px; text-shadow:1px 1px #5f7832; }
+.quickEditUser .topMiniBox5 a:hover,
+.quickEditUser .topMiniBox6 a:hover { color:#3a5c02; text-shadow:1px 1px #cee083; }
+.quickEditUser .topMiniBox5 span,
+.quickEditUser .topMiniBox6 span,
+.quickEditUser .topMiniBox7 span {font-family:Arial, Helvetica, sans-serif; font-size:14px; color:#3a5c02;text-align:center; font-weight:bold; letter-spacing:1px; text-shadow:1px 1px #cee083;-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=40)";filter: alpha(opacity=40);opacity:0.4;}
+.quickEditUser .topMiniBoxSep { float:left; width:1px; height:20px; background-color:#c1d989; margin:9px 5px 0 5px; }
+#pop2operation { display:none; position:fixed; z-index:20; left:50%; top:50%; margin-top:-200px; margin-left:-335px; width:670px; height:390px; -moz-box-shadow: 0 0 10px #888; -webkit-box-shadow: 0 0 10px #888; box-shadow: 0 0 10px #888; }
+
+#pop2iframe { border:none !important; }

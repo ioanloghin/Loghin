@@ -1,0 +1,48 @@
+Options +FollowSymLinks
+
+
+<IfModule mod_rewrite.c>
+
+RewriteEngine on
+RewriteBase /
+
+RewriteCond %{http_host} ^loghin.com [nc]
+RewriteRule ^(.*)$ http://www.loghin.com/$1 [r=301,nc]
+
+## Language
+RewriteRule ^([a-z]{2})/?$ index.php?lang=$1 [L]
+
+## Home Page
+RewriteRule ^([a-z]{2})?/?h-([0-9]+)(/c-([0-9]+))?/?$ index.php?lang=$1&m=home&h=$2&c=$4 [L]
+RewriteRule ^([a-z]{2})?/?h-([0-9]+)/c-([0-9]+)/f-([0-9]+)/?$ index.php?lang=$1&m=home&h=$2&c=$3&f=$4 [L]
+
+
+## Forums && Topics
+RewriteRule ^([a-z]{2})?/?p-([0-9]+)(/c-([0-9]+))?/?$ index.php?lang=$1&m=forums&profession_id=$2&category_id=$4 [L]
+RewriteRule ^([a-z]{2})?/?p-([0-9]+)/f-([0-9]+)(/page-([0-9]+))?/?$ index.php?lang=$1&m=topics&profession_id=$2&id=$3&page=$5 [L]
+RewriteRule ^([a-z]{2})?/?p-([0-9]+)/f-([0-9]+)/post/?$ index.php?lang=$1&m=topics&p=post&profession_id=$2&id=$3 [L]
+RewriteRule ^([a-z]{2})?/?p-([0-9]+)/t-([0-9]+)(/(reply|edit|quote|delete|lock|watch|unwatch))?(-([0-9]+))?(/page-([0-9]+))?/?$ index.php?lang=$1&m=post&p=$5&profession_id=$2&id=$3&post_id=$7&page=$9 [L]
+
+
+## Profile && Private Messages && Logout
+RewriteRule ^([a-z]{2})?(/?p-([0-9]+))?/?messages(/(inbox|sent))?/?$ index.php?lang=$1&m=messages&p=$5&profession_id=$3 [L]
+RewriteRule ^([a-z]{2})?(/?p-([0-9]+))?/?messages/(inbox|sent)/show-([0-9]+)(/(delete))?/?$ index.php?lang=$1&m=messages&p=show&type=$4&id=$5&profession_id=$3&a=$7 [L]
+RewriteRule ^([a-z]{2})?(/?p-([0-9]+))?/?messages/(sendpm|reply|quote)-([0-9]+)/?$ index.php?lang=$1&m=messages&p=$4&id=$5&profession_id=$3 [L]
+RewriteRule ^logout/?$ index.php?m=logout [L]
+
+
+## External forums
+RewriteRule ^([a-z]{2})?/?p-([0-9]+)/(c|f)-([0-9]+)/forums/?$ index.php?m=external_forums&&p=$3&profession_id=$2&id=$4 [L]
+
+
+## Search
+RewriteRule ^([a-z]{2})?/?p-([0-9]+)/search(/page-([0-9]+))?/?$ index.php?lang=$1&m=search&page=$4&profession_id=$2 [L]
+
+## Pages
+RewriteRule ^([a-z]{2})?/?p-([0-9]+)/([-a-zA-Z0-9]+)/?$ index.php?lang=$1&m=page&label=$3&profession_id=$2 [L]
+
+## 404!!!
+RewriteRule ^(([a-z]{2})/)?404/?$ index.php?lang=$2&m=404 [L]
+
+
+</IfModule>

@@ -1,0 +1,15 @@
+/*@import url('layout2.css');*/
+
+#Header { height:auto; }
+#Header > .head-pattern > .head-effect { height:auto; padding-bottom:40px; }
+#Header .head > .left { display:block; width:214px; height:auto; padding:15px 0 0 1px; }
+#Header .head > .left > a { display:block; width:auto; height:auto; }
+#Header .head > .left > a > img { display:block; width:auto; max-width:200px; height:auto; }
+#Header .head > .middle { display:block; width:auto; max-width:320px; height:auto; padding:6px 0 0 0; }
+#Header .head > .middle > .title { display:block; width:auto; height:auto; background:none; border:none; }
+#Header .head > .middle > .subtitle { display:block; width:auto; height:auto; margin-top:6px; line-height:16px; font-weight:bold; font-size:14px; }
+#Header .head > .right { display:block; width:350px; height:auto; background:none; border:none; padding:14px 0 0 0; }
+#Header .head > .right > ul { display:block; height:auto; background:none; border:none; }
+#Header .head > .right > ul > li { display:block; float:none; width:auto; height:auto; background:none; border:none; color:#F5F5F5; font-family:Verdana, Geneva, sans-serif; font-size:16px; font-style:italic; font-weight:normal; padding:0; margin:0; line-height:22px; }
+#Header .nav { margin-top:10px; }
+#Content { }

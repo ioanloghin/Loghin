@@ -1,0 +1,18 @@
+<IfModule mod_rewrite.c>
+
+## Start Rewrite
+RewriteEngine on
+RewriteBase /
+
+
+## Set before www
+RewriteCond %{http_host} ^loghin.com [nc]
+RewriteRule ^(.*)$ http://www.loghin.com/$1 [r=301,nc]
+
+
+#RewriteCond %{REQUEST_FILENAME} !-f
+#RewriteCond %{REQUEST_FILENAME} !-d
+#RewriteRule ^(.*?)$ designer/$1 [PT,L]
+#RewriteRule ^$ designer/ [PT,L]
+
+</IfModule>

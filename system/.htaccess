@@ -1,0 +1,15 @@
+Options +FollowSymLinks
+
+<IfModule mod_rewrite.c>
+
+RewriteEngine on
+RewriteBase /system/
+
+## Language
+RewriteRule ^([a-z]{2})/?$ index.php?lang=$1 [L]
+
+## Pages
+RewriteRule ^(?:([a-z]{2})/)?([-\w]+)(?:/([\w]+))?/$ index.php?lang=$1&m=$2&p=$3 [L]
+
+
+</IfModule>

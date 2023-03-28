@@ -1,0 +1,27 @@
+/* CSS Document */
+
+@import url(http://fonts.googleapis.com/css?family=Roboto);
+
+body {margin:0;font-family:'Lato',sans-serif;color:#333;}
+a, a:visited {text-decoration:none;color:#000;}
+a.owner {color:#03C;}
+h1 {font-size: 32px;margin: 16px 0 0 0;}
+.page_width {max-width:1400px; width:96%;}
+.center {margin-left:auto; margin-right:auto;}
+ul {padding:0;margin:0;list-style:none;}
+
+/* Header */
+header {}
+header > .top-bar {height:42px;background:url("../img/header-line-pattern.gif") repeat;background-color:#3A3C46;border-bottom:1px solid #303139}
+header > .top-bar > .wide {min-width:700px;max-width:1000px;margin:0 auto;line-height:39px}
+header > .top-bar > .wide > .AGH_menu {justify-content:space-between;display:flex;font-family:Arial, Helvetica, sans-serif;font-size:13px;padding-left:15px;text-align:left;color:#CCC}
+header > .top-bar > .wide > .AGH_menu > .left {float:none;}
+header > .top-bar > .wide > .AGH_menu > .left a {color:#FFF}
+header > .top-bar > .wide > .AGH_menu > .left a:hover {color:#CCC;text-decoration:underline}
+header > .top-bar > .wide > .AGH_menu > .left strong {color:#FFF;text-decoration:underline;font-weight:normal}
+header > .top-bar > .wide > .AGH_menu > .right {float:none;}
+header > .top-bar > .wide > .AGH_menu > .right .top_login {float:right;margin-top:9px;position:relative;}
+header > .top-bar > .wide > .AGH_menu > .right .top_login .errors { position:absolute; background-color:#FCC; border:1px solid #F60; padding:4px 5px; -webkit-box-shadow: 0px 2px 5px 0px #999; box-shadow: 0px 2px 5px 0px #999; left:5px; top:35px; width:210px; text-align:center; line-height:14px; color:#900;-webkit-border-radius:5px;-moz-border-radius:5px;border-radius:5px;}
+header > .top-bar > .wide > .AGH_menu > .right .top_login input[type=text],
+header > .top-bar > .wide > .AGH_menu > .right .top_login input[type=password] {float:left;margin-top:2px;width:100px;margin-left:5px}
+header > .top-bar > .wide > .AGH_menu > .right .top_login input[type=submit] {float:left;margin-top:2px;margin-left:5px}

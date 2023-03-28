@@ -1,0 +1,1 @@
+<div style="background:url(http://ipad-wallpapers.co/wp-content/uploads/walls/thumbs/Abstract-Bokeh-Effect-Green-400x400.jpg); width:340px; height:340px; padding:30px;"><img src="header-image.php" width="340" height="200" alt="" /></div>

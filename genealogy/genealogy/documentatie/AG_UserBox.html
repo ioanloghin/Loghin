@@ -1,0 +1,91 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>clasa AG_UserBox</title>
+<link rel="stylesheet" type="text/css" href="images/style.css" />
+</head>
+
+<body>
+<ul class="menu">
+	<li>&rsaquo; <a href="AG_Operation.html">Clasa AG_Operation</a></li>
+    <li>&rsaquo; <span>Clasa AG_UserBox</span></li>
+    <li>&rsaquo; <a href="AG_FamilyBox.html">Clasa AG_FamilyBox</a></li>
+    <li>&rsaquo; <a href="SQL_DB.html">Clasa SQL_DB</a></li>
+</ul>
+<br /><br /><br />
+<h1>Clasa AG_UserBox</h1>
+<blockquote>
+	<p>Este o clasa obiect ce permite afisarea casutei utilizatorului in diagrama arborelui.</p>
+    <p class="important">Clasa AG_UserBox nu extinde nici o alta clasa.<br />Adresa locala: codes/clase/AG_UserBox.php<br />Pentru a crea un obiect folosind aceasta clasa, apelati <strong>$myObj = new AG_UserBox();</strong></p>
+    <ul class="class_var">
+    	<li>public <strong>$width</strong> = 0; <span class="gri">// latimea containerului</span></li>
+        <li>public <strong>$height</strong> = 0; <span class="gri">// inaltimea containerului</span></li>
+        <li>public <strong>$posX</strong> = 0; <span class="gri">// coordonata X in raport cu box-ul familiei</span></li>
+        <li>public <strong>$posY</strong> = 0; <span class="gri">// coordonata Y in raport cu box-ul familiei</span></li>
+        <li>public <strong>$marginLeft</strong> = 0; <span class="gri">// distanta pe axa 0X</span></li>
+        <li>public <strong>$marginTop</strong> = 0; <span class="gri">// distanta pe axa 0Y</span></li>
+        <li>private <strong>$internalRelation</strong> = array('id' => 0, 'index' => 0); <span class="gri">// ID-ul relatiei interne, din interiorul familiei, si INDEX-ul care rep. numerotarea copiilor, unchiilor etc.</span></li>
+        <li>private <strong>$externalRelation</strong> = array('id' => 0, 'index' => 0); <span class="gri">// ID-ul relatiei externe din perspectiva userului selectat</span></li>
+        <li>private <strong>$info</strong> = array(); <span class="gri">// lista cu informatii despre utilizator</span></li>
+    </ul>
+</blockquote>
+<br /><br />
+<h2>Functia <strong>__construct</strong>($width, $height)</h2> 
+<blockquote>
+	<p>Fiind constructorul clasei, acest atribuie variablilei o referinta catre obiectul creat.</p>
+	<pre>$myUserBox = new AG_UserBox();</pre>
+</blockquote>
+
+<h2>Functia <strong>setInfo</strong>($info = array())</h2> 
+<blockquote>
+	<p>Atribuie variabilei $info valoarea primita prin parametru.</p>
+	<pre>$info = array(
+  'nume' => 'Popescru',
+  'email' => 'popescu@domeniu.ro'
+);
+
+$myUserBox->setInfo($info);
+
+
+// SAU asa:
+// va introduce toate informatiile userului din baza de date
+$info = array();
+$info = AG_Operation::userInfo($id_user);
+
+$myUserBox->setInfo($info);</pre>
+</blockquote>
+
+<h2>Functia <strong>setInternalRelation</strong>($id_relation, $index = 0)</h2> 
+<blockquote>
+	<p>Calculeaza si atribuie variabilelor $internalRelation si $internalRelationIndex valorile corespunzatoare. $index incepe numerotarea de la 0, asa ca primul copil va avea 0, al doilea 1, urmatorul 2.</p>
+	<pre>$myUserBox->setInternalRelation(1); // pentru tata
+$myUserBox->setInternalRelation(2); // pentru mama
+$myUserBox->setInternalRelation(3, 0); // pentru copil 1
+$myUserBox->setInternalRelation(3, 1); // pentru copil 2</pre>
+</blockquote>
+
+<h2>Functia <strong>setCoord</strong>($family_recog)</h2> 
+<blockquote>
+	<p>Atribuie variabilelor $posX si $posY din interiorul obiectului valorile corespunz&#259;toare (in px).<br />
+    Aceasta functie este apelata in interiorul obiectului familie.</p>
+    <p class="important">Pentru stabilirea coordonatelor are nevoie ca variabilele <strong>$width</strong> si <strong>$height</strong> sa fie setate.</p>
+</blockquote>
+
+<h2>Functia <strong>HTMLcode</strong>($special = NULL)</h2> 
+<blockquote>
+	<span class="return">Return $userBox_HTMLcode;</span>
+	<p>Parametrul $type nu este obligatoriu. Acesta are rol in precizarea unor setari speciale, dupa cum veti observa in exemplul de mai jos.<br />Aceasta functie returneaza codul HTML cu toate informatiile corespunzatoare pentru chenarul utilizatorului.</p>
+	<pre>$userBox_html = $myUserBox->HTMLcode();
+
+$userBox_html_selected = $myUserBox->HTMLcode('blue');</pre>
+</blockquote>
+
+<h2>Functia <strong style="color:#F90;">setFixed</strong>($align = 'center', $valign = 'middle')</h2> 
+<blockquote>
+	<p>Functie privata (nu poate fi apelata din exterior).<br />Atribuie variabilelor $marginLeft si $marginTop din interiorul obiectului valorile corespunz&#259;toare (in px).<br />
+    Aceasta functie este apelata in interiorul metodei setRecog() dupa setCoord(). Va fixa conform parametriilor, fata de punctul aflat la coordonatele (x, y).</p>
+    <p class="important">Pentru a fixa obiectul are nevoie ca variabilele <strong>$width</strong>, <strong>$height</strong>, <strong>$posX</strong> si <strong>$posY</strong> sa fie setate.</p>
+</blockquote>
+
+</body>
+</html>
