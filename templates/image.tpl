@@ -1226,7 +1226,7 @@
 					<a href="#">You opinion</a> &bull;
 					<a href="#">Work with us</a>
 				</p>
-        		<p class="right">Copyright &copy; 2020 Loghin. All rights reserved...</div> 
+        		<p class="right">Copyright &copy; 2023 Loghin. All rights reserved...</div> 
 			</div>
 		</div>
 		{* End footer *}
